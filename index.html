@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maryam Asha — Full Stack Developer (Laravel · Vue.js)</title>
+  <meta name="description" content="Maryam Asha — Full Stack Developer (Laravel · Vue.js). 3+ years shipping production systems where performance, real-time concurrency, and security are hard requirements. Caching, query optimization, real-time architectures, and AI-integrated search." />
+
+  <!-- Favicon: MA monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23141414'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' font-style='italic' fill='%23F6F2EB' text-anchor='middle'>ma</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Arabic font (loaded once, applied via [lang=ar]) -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SCROLL PROGRESS BAR  —  ultra-thin, fills as the page scrolls
+       ============================================================ -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__fill" id="scrollProgressFill"></div>
+  </div>
+
+  <!-- ============================================================
+       NAV
+       ============================================================ -->
+  <nav class="nav-bar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- ===========================================================
+             WORDMARK LOGO  —  Active option: Option 1 (Elegant Serif)
+             To switch styles, change the brand class below:
+               class="brand brand-serif"  →  Option 1: Elegant Serif    [ACTIVE]
+               class="brand brand-sans"   →  Option 2: Modern Tech / Sans
+               class="brand brand-mono"   →  Option 3: Minimalist Mono
+             The wordmark is theme- and language-aware automatically.
+             =========================================================== -->
+        <a href="#top" class="brand brand-mono" id="brand" aria-label="Maryam Asha — home">
+          <span class="brand-mark" aria-hidden="true">
+            <!-- Minimalist MA monogram (kept as small mark beside wordmark) -->
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 24 L6 9 L11.5 19 L17 9 L17 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.5 24 L24 9 L29.5 24 M20.8 19 L27.2 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+
+          <!-- Wordmark — EN and AR variants; CSS shows only the active script -->
+          <span class="wordmark" id="wordmark">
+            <span class="wm-en">
+              <span class="wm-bracket"><</span><span class="wm-first">Maryam</span><span class="wm-sep">&nbsp;</span><span class="wm-last">Asha</span><span class="wm-bracket">></span>
+            </span>
+            <span class="wm-ar" lang="ar">
+              <span class="wm-bracket"><</span><span class="wm-first">مريم</span><span class="wm-sep">&nbsp;</span><span class="wm-last">عشا</span><span class="wm-bracket">></span>
+            </span>
+          </span>
+        </a>
+
+        <!-- ============================================================
+             ALTERNATIVE WORDMARK MARKUP — already supported by CSS
+             ============================================================
+             OPTION 2 (Modern Tech / Sans):
+               <a href="#top" class="brand brand-sans" id="brand" …>
+                 … same inner markup …
+               </a>
+
+             OPTION 3 (Minimalist Monospace):
+               <a href="#top" class="brand brand-mono" id="brand" …>
+                 … same inner markup …
+               </a>
+
+             You can also flip options at runtime in DevTools:
+               document.getElementById('brand').className =
+                 'brand brand-sans';   // or brand-mono / brand-serif
+             ============================================================ -->
+
+        <div class="nav-links" id="navLinks">
+          <a href="#about"      data-i18n="nav.about">About</a>
+          <a href="#skills"     data-i18n="nav.skills">Skills</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#projects"   data-i18n="nav.projects">Projects</a>
+          <a href="#contact"    data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars" id="themeIcon" aria-hidden="true"></i>
+          </button>
+          <button class="icon-btn icon-btn-text" id="langToggle" type="button" aria-label="Switch language">
+           <span id="langLabel" data-i18n="lang.switch">العربية</span>
+          </button>
+          <a class="nav-cta" href="#contact">
+            <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            <span data-i18n="nav.cta">Let's Ship</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <header class="hero">
+      <!-- ============================================================
+           FLOATING TOOLS LAYER — subtle, drifting icons of the stack
+           Each tool is independently animated for an organic feel.
+           ============================================================ -->
+      <div class="hero-bg-tools" aria-hidden="true">
+        <span class="bg-tool" style="top: 11%; left: 4%; --dur: 14s; --delay: 0s;">
+          <i class="bi bi-lightning-charge-fill"></i><span>Octane</span>
+        </span>
+        <span class="bg-tool" style="top: 7%; left: 38%; --dur: 17s; --delay: 1.2s;">
+          <i class="bi bi-chat-dots-fill"></i><span>Telegram Bot</span>
+        </span>
+        <span class="bg-tool" style="top: 13%; right: 6%; --dur: 15s; --delay: 2.5s;">
+          <i class="bi bi-database-fill"></i><span>Redis</span>
+        </span>
+        <span class="bg-tool" style="top: 47%; left: 2%; --dur: 12s; --delay: 3.8s;">
+          <i class="bi bi-broadcast-pin"></i><span>Reverb · WS</span>
+        </span>
+        <span class="bg-tool" style="top: 42%; right: 4%; --dur: 18s; --delay: 5s;">
+          <i class="bi bi-shield-check"></i><span>RBAC</span>
+        </span>
+        <span class="bg-tool" style="bottom: 22%; left: 7%; --dur: 13s; --delay: 6.2s;">
+          <i class="bi bi-cpu"></i><span>n8n</span>
+        </span>
+        <span class="bg-tool" style="bottom: 14%; left: 36%; --dur: 16s; --delay: 7.4s;">
+          <i class="bi bi-search"></i><span>Semantic Search</span>
+        </span>
+        <span class="bg-tool" style="bottom: 18%; right: 8%; --dur: 14s; --delay: 8.6s;">
+          <i class="bi bi-speedometer2"></i><span>JMeter · p95</span>
+        </span>
+      </div>
+
+      <div class="container">
+        <div class="row g-5 align-items-end">
+          <div class="col-lg-8 stagger">
+          
+
+            <h1 class="hero-title" data-i18n="hero.name">
+              Maryam<br />
+              <em>Asha</em>
+            </h1>
+
+            <p class="hero-role" data-i18n="hero.role">
+              Full Stack Developer building production systems with
+              <span class="stack">Laravel</span> &amp; <span class="stack">Vue.js</span> — where performance and complexity are hard requirements.
+            </p>
+
+            <p class="hero-lead" data-i18n="hero.lead">
+              3+ years shipping backend-leaning systems for production environments where performance, real-time
+              concurrency, and security are hard requirements. Caching strategies, query optimization, real-time
+              architectures, and AI-integrated search — with the engineering foundation to own the full
+              delivery cycle, from code to production.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn-ink" href="#projects">
+                <i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>
+                <span data-i18n="hero.viewPortfolio">View Work</span>
+              </a>
+              <a class="btn-ghost" href="#" id="downloadCv">
+                <i class="bi bi-download" aria-hidden="true"></i>
+                <span data-i18n="hero.downloadCv">Download CV</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 hero-card-wrap">
+            <div class="hero-card" role="complementary" aria-label="At a glance">
+              <div class="term-line" data-i18n="hero.card.term">whoami</div>
+              <div style="margin: 8px 0 18px; color: var(--ink); font-family: var(--f-serif); font-size: 1.35rem; line-height: 1.35;" data-i18n="hero.card.quote">
+                Engineer who optimizes <em style="color: var(--accent)">before it is a fire</em> — not after.
+              </div>
+
+              <div class="h-row"><span class="h-label" data-i18n="hero.card.role.l">Role</span><span class="v" data-i18n="hero.card.role.v">Full Stack Dev</span></div>
+              <div class="h-row"><span class="h-label" data-i18n="hero.card.focus.l">Focus</span><span class="v" data-i18n="hero.card.focus.v">Laravel · Vue.js</span></div>
+              <div class="h-row"><span class="h-label" data-i18n="hero.card.exp.l">Experience</span><span class="v" data-i18n="hero.card.exp.v">3+ yrs</span></div>
+              <div class="h-row"><span class="h-label" data-i18n="hero.card.addons.l">Specialty</span><span class="v" data-i18n="hero.card.addons.v">Real-time · Caching · AI search</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stack marquee -->
+    <!-- <div class="hero-strip" aria-hidden="true">
+      <div class="marquee" id="strip">
+        <span>Laravel</span><span>Laravel Octane</span><span>Vue.js</span><span>PHP</span><span>MySQL</span>
+        <span>Redis</span><span>Laravel Reverb</span><span>RESTful APIs</span><span>RBAC</span><span>Tailwind</span>
+        <span>Vuetify</span><span>n8n Automation</span><span>Semantic Search</span><span>Qdrant</span>
+        <span>Telegram Bot API</span><span>Apache JMeter</span> -->
+        <!-- Duplicate for seamless loop -->
+        <!-- <span>Laravel</span><span>Laravel Octane</span><span>Vue.js</span><span>PHP</span><span>MySQL</span>
+        <span>Redis</span><span>Laravel Reverb</span><span>RESTful APIs</span><span>RBAC</span><span>Tailwind</span>
+        <span>Vuetify</span><span>n8n Automation</span><span>Semantic Search</span><span>Qdrant</span>
+        <span>Telegram Bot API</span><span>Apache JMeter</span>
+      </div>
+    </div> -->
+
+
+    <!-- ============================================================
+         ABOUT & EDUCATION
+         ============================================================ -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num" data-i18n="about.num">01 / About</span>
+          <h2 class="section-title" data-i18n="about.title"><em>Background</em>, briefly.</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="row g-5">
+          <div class="col-lg-7 about-text reveal">
+            <p class="lead" data-i18n="about.lead">
+              I build web platforms that <em>actually ship</em> — and stay alive in production.
+            </p>
+            <p data-i18n="about.p1">
+              I’m an Informatics Engineer turned Full Stack Developer. For the last 3+ years I’ve
+              been writing Laravel APIs, Vue components and the boring-but-essential glue in between —
+              query optimization, caching strategies, role-based access, payments, search.
+            </p>
+            <p data-i18n="about.p2">
+              On the side I’ve trained in data science and ML (CNNs, NLP, GANs) and now treat those
+              tools as practical add-ons: semantic search, content classification, workflow automation
+              with n8n. I reach for them when they make a feature better, not for their own sake.
+            </p>
+
+            <div class="stat-strip">
+              <div class="stat">
+                <div class="n" data-i18n="about.stat1.n"><em>3+</em></div>
+                <div class="l" data-i18n="about.stat1.l">Years building<br />full stack apps</div>
+              </div>
+              <div class="stat">
+                <div class="n" data-i18n="about.stat2.n">3</div>
+                <div class="l" data-i18n="about.stat2.l">Production<br />platforms shipped</div>
+              </div>
+              <div class="stat">
+                <div class="n" data-i18n="about.stat3.n">2</div>
+                <div class="l" data-i18n="about.stat3.l">Degrees<br />BSc · MSc</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 reveal">
+            <div class="mono muted" style="margin-bottom: 18px;" data-i18n="edu.label">— Education</div>
+
+            <div class="edu-card">
+              <div class="year" data-i18n="edu1.year">2024 — Present</div>
+              <div class="deg" data-i18n="edu1.deg">MSc, Business Administration</div>
+              <div class="inst" data-i18n="edu1.inst">Graduate studies bridging engineering with product &amp; strategy.</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="year" data-i18n="edu2.year">2018 — 2023</div>
+              <div class="deg" data-i18n="edu2.deg">BSc, Informatics Engineering</div>
+              <div class="inst" data-i18n="edu2.inst">University of Aleppo — graduated with commendable academic performance.</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="year" data-i18n="edu3.year">2023 — 2024</div>
+              <div class="deg" data-i18n="edu3.deg">Data Science · SHAI For AI</div>
+              <div class="inst" data-i18n="edu3.inst">Two-level intensive in ML, deep learning, CNNs and NLP. Now mentoring incoming cohorts.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SKILLS
+         ============================================================ -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num" data-i18n="skills.num">02 / Skills</span>
+          <h2 class="section-title" data-i18n="skills.title">The <em>stack</em> I reach for.</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="row g-4 reveal reveal-children">
+          <!-- Backend (primary) -->
+          <div class="col-lg-6 reveal">
+            <div class="skill-group primary">
+              <div class="sg-head">
+                <div class="sg-title" data-i18n="skills.backend.title">Backend <em>· primary</em></div>
+                <span class="sg-icon"><i class="bi bi-hdd-stack-fill" aria-hidden="true"></i></span>
+              </div>
+
+              <div class="skill-bars">
+                <div class="bar-row"><div class="br-top"><span class="n" data-latin>Laravel</span><span class="v" data-i18n="skills.lvl.expert">Expert</span></div><div class="bar"><span data-w="95"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-latin>PHP</span><span class="v" data-i18n="skills.lvl.expert">Expert</span></div><div class="bar"><span data-w="92"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-latin>RESTful APIs</span><span class="v" data-i18n="skills.lvl.advanced">Advanced</span></div><div class="bar"><span data-w="90"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-i18n="skills.row.mysql">MySQL · Query Optimization</span><span class="v" data-i18n="skills.lvl.advanced">Advanced</span></div><div class="bar"><span data-w="86"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-i18n="skills.row.redis">Redis · Caching</span><span class="v" data-i18n="skills.lvl.proficient">Proficient</span></div><div class="bar"><span data-w="78"></span></div></div>
+              </div>
+
+              <hr style="border-color: var(--line); margin: 22px 0;" />
+
+              <div class="chips">
+                <span class="chip" data-latin><i class="bi bi-box-arrow-in-down" aria-hidden="true"></i>Eloquent</span>
+                <span class="chip" data-latin>Sanctum</span>
+                <span class="chip" data-i18n="skills.chip.queues">Queues &amp; Jobs</span>
+                <span class="chip" data-latin>Filament</span>
+                <span class="chip" data-latin>Stripe</span>
+                <span class="chip" data-i18n="skills.chip.multiTenant">Multi-tenant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend (primary) -->
+          <div class="col-lg-6 reveal">
+            <div class="skill-group primary">
+              <div class="sg-head">
+                <div class="sg-title" data-i18n="skills.frontend.title">Frontend <em>· primary</em></div>
+                <span class="sg-icon"><i class="bi bi-window-stack" aria-hidden="true"></i></span>
+              </div>
+
+              <div class="skill-bars">
+                <div class="bar-row"><div class="br-top"><span class="n" data-latin>Vue.js · Vuex · Pinia</span><span class="v" data-i18n="skills.lvl.expert">Expert</span></div><div class="bar"><span data-w="93"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-latin>JavaScript (ES2020+)</span><span class="v" data-i18n="skills.lvl.advanced">Advanced</span></div><div class="bar"><span data-w="88"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-latin>Bootstrap 5</span><span class="v" data-i18n="skills.lvl.advanced">Advanced</span></div><div class="bar"><span data-w="90"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-latin>Tailwind CSS</span><span class="v" data-i18n="skills.lvl.advanced">Advanced</span></div><div class="bar"><span data-w="86"></span></div></div>
+                <div class="bar-row"><div class="br-top"><span class="n" data-i18n="skills.row.html">HTML5 · Responsive CSS</span><span class="v" data-i18n="skills.lvl.expert">Expert</span></div><div class="bar"><span data-w="94"></span></div></div>
+              </div>
+
+              <hr style="border-color: var(--line); margin: 22px 0;" />
+
+              <div class="chips">
+                <span class="chip" data-latin>Vue Router</span>
+                <span class="chip" data-latin>Axios</span>
+                <span class="chip" data-latin>Vite</span>
+                <span class="chip" data-latin>SASS</span>
+                <span class="chip" data-latin>SPA / SSR</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI add-ons -->
+          <div class="col-lg-6 reveal">
+            <div class="skill-group">
+              <div class="sg-head">
+                <div class="sg-title" data-i18n="skills.ai.title">AI &amp; ML <em>· add-ons</em></div>
+                <span class="sg-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
+              </div>
+              <p class="muted" style="font-size:.95rem; margin: -6px 0 18px;" data-i18n="skills.ai.caption">
+                Practical AI capabilities I plug into web products when they earn their place.
+              </p>
+              <div class="chips">
+                <span class="chip solid" data-i18n="skills.chip.semantic">Semantic Search</span>
+                <span class="chip solid" data-latin>NLP</span>
+                <span class="chip" data-latin>Python</span>
+                <span class="chip" data-latin>TensorFlow</span>
+                <span class="chip" data-latin>PyTorch</span>
+                <span class="chip" data-latin>Keras</span>
+                <span class="chip" data-latin>CNNs</span>
+                <span class="chip" data-latin>LSTM</span>
+                <span class="chip" data-latin>GANs</span>
+                <span class="chip" data-latin>OpenCV</span>
+                <span class="chip" data-latin>scikit-learn</span>
+                <span class="chip" data-latin>Pandas · NumPy</span>
+                <span class="chip" data-latin>Power BI</span>
+                <span class="chip" data-latin>Django REST</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & infra -->
+          <div class="col-lg-6 reveal">
+            <div class="skill-group">
+              <div class="sg-head">
+                <div class="sg-title" data-i18n="skills.tools.title">Tools <em>&amp; workflow</em></div>
+                <span class="sg-icon"><i class="bi bi-tools" aria-hidden="true"></i></span>
+              </div>
+              <p class="muted" style="font-size:.95rem; margin: -6px 0 18px;" data-i18n="skills.tools.caption">
+                The day-to-day belt — version control, automation, deployment, observability.
+              </p>
+              <div class="chips">
+                <span class="chip accent" data-i18n="skills.chip.n8n">n8n Automation</span>
+                <span class="chip" data-latin>Git · GitHub</span>
+                <span class="chip" data-latin>GitLab CI</span>
+                <span class="chip" data-latin>Docker</span>
+                <span class="chip" data-latin>Nginx</span>
+                <span class="chip" data-latin>Linux</span>
+                <span class="chip" data-latin>Postman</span>
+                <span class="chip" data-latin>Figma</span>
+                <span class="chip" data-latin>Jira</span>
+                <span class="chip" data-i18n="skills.chip.agile">Agile / Scrum</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         EXPERIENCE
+         ============================================================ -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num" data-i18n="exp.num">03 / Experience</span>
+          <h2 class="section-title" data-i18n="exp.title">Where I've <em>shipped</em>.</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="timeline">
+
+              <div class="tl-item current reveal">
+                <div class="tl-card">
+                  <div class="tl-meta">
+                    <span class="tag-now" data-i18n="exp1.tag">● Now</span>
+                    <!-- <span data-i18n="exp1.role">Full Stack Developer</span> -->
+                    <span data-i18n="exp1.location">Damascus / Remote</span>
+                  </div>
+                  <h3 class="tl-role" data-i18n="exp1.role">Full Stack Developer</h3>
+                  <div class="tl-company"><span data-i18n="exp1.company">Automata4 Group</span> <span class="at" data-i18n="exp1.companySub">— Wajab &amp; Katateeb platforms</span></div>
+                  <div class="tl-body">
+                    <span data-i18n="exp1.body">Lead developer across two flagship products. Built and maintained Laravel APIs serving
+                    Vue.js frontends, owning features end-to-end from schema to UI.</span>
+                    <ul>
+                      <li data-i18n="exp1.li1">Architected RESTful APIs powering Wajab (job marketplace) and Katateeb (publishing platform).</li>
+                      <li data-i18n="exp1.li2">Drove backend performance with query optimization, eager loading, and Redis caching — sub‑200ms p95 on core endpoints.</li>
+                      <li data-i18n="exp1.li3">Shipped role/permission systems, payment integrations, and complex search workflows.</li>
+                    </ul>
+                  </div>
+                  <div class="tl-stack">
+                    <span class="chip" data-latin>Laravel</span>
+                    <span class="chip" data-latin>Vue.js</span>
+                    <span class="chip" data-latin>MySQL</span>
+                    <span class="chip" data-latin>Redis</span>
+                    <span class="chip" data-latin>REST</span>
+                    <span class="chip" data-latin>Tailwind</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tl-item reveal">
+                <div class="tl-card">
+                  <div class="tl-meta">
+                    <span data-i18n="exp2.tag">2022 — 2024</span>
+                    <!-- <span data-i18n="exp2.subtag">Full Stack Developer</span> -->
+                  </div>
+                  <h3 class="tl-role" data-i18n="exp2.role">Full Stack Developer</h3>
+                  <div class="tl-company"><span data-i18n="exp2.company">Comma</span> <span class="at" data-i18n="exp2.companySub">— ZOKA E‑Commerce</span></div>
+                  <div class="tl-body">
+                    <span data-i18n="exp2.body">Built the ZOKA e-commerce platform from product catalog to checkout. Owned both the
+                    Laravel backend and the Vue.js storefront.</span>
+                    <ul>
+                      <li data-i18n="exp2.li1">Designed the product, cart, order and payment data model and the APIs around it.</li>
+                      <li data-i18n="exp2.li2">Built a reactive Vue storefront with filtered search, faceted browse and a fast checkout.</li>
+                      <li data-i18n="exp2.li3">Integrated payment gateways and order lifecycle automation with notification workflows.</li>
+                    </ul>
+                  </div>
+                  <div class="tl-stack">
+                    <span class="chip" data-latin>Laravel</span>
+                    <span class="chip" data-latin>Vue.js</span>
+                    <span class="chip" data-latin>MySQL</span>
+                    <span class="chip" data-latin>Bootstrap</span>
+                    <span class="chip" data-i18n="chip.payments">Payments</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tl-item reveal">
+                <div class="tl-card">
+                  <div class="tl-meta">
+                    <span data-i18n="exp3.tag">2022 — Present</span>
+                    <!-- <span data-i18n="exp3.subtag">Co-Founder · Technical Lead</span> -->
+                  </div>
+                  <h3 class="tl-role" data-i18n="exp3.role">Co-Founder &amp; Technical Lead</h3>
+                  <div class="tl-company"><span data-i18n="exp3.company">Wasla</span></div>
+                  <div class="tl-body">
+                    <span data-i18n="exp3.body">Co-founded Wasla and lead the engineering side: full ownership of the tech stack,
+                    product architecture, and developer workflow.</span>
+                    <ul>
+                      <li data-i18n="exp3.li1">Made the product, infrastructure and stack decisions from day one.</li>
+                      <li data-i18n="exp3.li2">Built MVP features rapidly in Laravel + Vue.js, iterated based on real user feedback.</li>
+                      <li data-i18n="exp3.li3">Set up CI/CD, environments and observability so the team could move quickly without breaking production.</li>
+                    </ul>
+                  </div>
+                  <div class="tl-stack">
+                    <span class="chip" data-latin>Laravel</span>
+                    <span class="chip" data-latin>Vue.js</span>
+                    <span class="chip" data-latin>Docker</span>
+                    <span class="chip" data-latin>CI/CD</span>
+                    <span class="chip" data-i18n="chip.product">Product</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tl-item reveal">
+                <div class="tl-card">
+                  <div class="tl-meta">
+                    <span data-i18n="exp4.tag">2023 — Present</span>
+                    <!-- <span data-i18n="exp4.subtag">AI &amp; Data Science</span> -->
+                  </div>
+                  <h3 class="tl-role" data-i18n="exp4.role">Data Science Practitioner &amp; Mentor</h3>
+                  <div class="tl-company"><span data-i18n="exp4.company">SHAI For AI</span> <span class="at" data-i18n="exp4.companySub">— Amman, Jordan</span></div>
+                  <div class="tl-body">
+                    <span data-i18n="exp4.body">Two-level intensive training in ML and deep learning (CNNs, NLP, ensemble methods).
+                    Now mentoring incoming cohorts through the end-to-end data pipeline.</span>
+                    <ul>
+                      <li data-i18n="exp4.li1">Built models for regression, classification and computer vision problems.</li>
+                      <li data-i18n="exp4.li2">Ranked competitively in Kaggle challenges (diamond price prediction, music genre classification).</li>
+                      <li data-i18n="exp4.li3">Mentor students on real-world data, feature engineering and model deployment.</li>
+                    </ul>
+                  </div>
+                  <div class="tl-stack">
+                    <span class="chip" data-latin>Python</span>
+                    <span class="chip" data-latin>TensorFlow</span>
+                    <span class="chip" data-latin>PyTorch</span>
+                    <span class="chip" data-latin>CNNs</span>
+                    <span class="chip" data-latin>NLP</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FEATURED PROJECTS
+         ============================================================ -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num" data-i18n="proj.num">04 / Projects</span>
+          <h2 class="section-title" data-i18n="proj.title">Selected <em>work</em>.</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="proj-grid reveal reveal-children">
+
+          <!-- FEATURED: Semantic Search -->
+          <article class="proj-card feat reveal">
+            <div class="proj-visual">
+              <!-- decorative SVG: search field + dot-cluster (semantic vectors) -->
+              <svg viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <radialGradient id="g1" cx="65%" cy="40%" r="55%">
+                    <stop offset="0%" stop-color="#B84B2A" stop-opacity=".35"/>
+                    <stop offset="100%" stop-color="#B84B2A" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="800" height="340" fill="#ECE5D6"/>
+                <rect width="800" height="340" fill="url(#g1)"/>
+                <!-- search bar mock -->
+                <rect x="80" y="60" width="640" height="56" rx="28" fill="#FBF8F1" stroke="#D9CFBC"/>
+                <circle cx="110" cy="88" r="9" fill="none" stroke="#141414" stroke-width="2"/>
+                <line x1="117" y1="95" x2="125" y2="103" stroke="#141414" stroke-width="2" stroke-linecap="round"/>
+                <text x="140" y="93" font-family="Georgia,serif" font-size="20" font-style="italic" fill="#141414">how do I refresh a vue prop when the parent…</text>
+                <rect x="650" y="72" width="56" height="32" rx="16" fill="#141414"/>
+                <text x="678" y="92" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#FBF8F1">⏎</text>
+                <!-- vector dot cloud -->
+                <g opacity=".9">
+                  <circle cx="160" cy="200" r="6" fill="#141414"/>
+                  <circle cx="210" cy="240" r="5" fill="#141414"/>
+                  <circle cx="260" cy="190" r="7" fill="#B84B2A"/>
+                  <circle cx="320" cy="230" r="5" fill="#141414"/>
+                  <circle cx="380" cy="200" r="9" fill="#B84B2A"/>
+                  <circle cx="450" cy="245" r="5" fill="#141414"/>
+                  <circle cx="500" cy="200" r="6" fill="#141414"/>
+                  <circle cx="560" cy="240" r="5" fill="#141414"/>
+                  <circle cx="620" cy="195" r="7" fill="#B84B2A"/>
+                  <circle cx="680" cy="235" r="5" fill="#141414"/>
+                  <!-- connection lines -->
+                  <g stroke="#141414" stroke-width="1" opacity=".25">
+                    <line x1="260" y1="190" x2="380" y2="200"/>
+                    <line x1="380" y1="200" x2="620" y2="195"/>
+                    <line x1="260" y1="190" x2="320" y2="230"/>
+                    <line x1="380" y1="200" x2="450" y2="245"/>
+                  </g>
+                </g>
+                <text x="80" y="305" font-family="JetBrains Mono,monospace" font-size="11" fill="#6B6358" letter-spacing="2">EMBEDDINGS · COSINE SIMILARITY · CONTEXT-AWARE RANKING</text>
+              </svg>
+            </div>
+            <div class="proj-head">
+              <span class="proj-tag" data-i18n="proj1.tag">— Featured · AI add-on</span>
+              <span class="proj-tag muted" data-i18n="proj1.year">2025</span>
+            </div>
+            <h3 class="proj-title" data-i18n="proj1.title">Semantic Search <em>Engine</em> Integration</h3>
+            <p class="proj-desc" data-i18n="proj1.desc">
+              Built and integrated a context-aware semantic search feature into a Laravel/Vue web platform.
+              Replaced keyword-only matching with embedding similarity, dramatically improving result
+              relevance for ambiguous and natural-language queries. Includes a hybrid scoring layer that
+              blends classic BM25 with vector similarity to keep precise queries sharp.
+            </p>
+            <div class="proj-stack">
+              <span class="chip" data-latin>Laravel</span>
+              <span class="chip" data-latin>Vue.js</span>
+              <span class="chip" data-i18n="chip.pyEmbed">Python (embeddings)</span>
+              <span class="chip" data-i18n="chip.vectorDb">Vector DB</span>
+              <span class="chip" data-latin>NLP</span>
+              <span class="chip" data-latin>REST</span>
+            </div>
+          </article>
+
+          <!-- n8n Automation -->
+          <article class="proj-card reveal">
+            <div class="proj-visual">
+              <svg viewBox="0 0 600 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="600" height="320" fill="#ECE5D6"/>
+                <!-- nodes -->
+                <g font-family="JetBrains Mono,monospace" font-size="10" fill="#141414">
+                  <rect x="40"  y="60"  width="110" height="48" rx="10" fill="#FBF8F1" stroke="#141414"/>
+                  <text x="95" y="89" text-anchor="middle">Webhook</text>
+                  <rect x="200" y="60"  width="110" height="48" rx="10" fill="#FBF8F1" stroke="#141414"/>
+                  <text x="255" y="89" text-anchor="middle">Transform</text>
+                  <rect x="360" y="20"  width="110" height="48" rx="10" fill="#FBF8F1" stroke="#141414"/>
+                  <text x="415" y="49" text-anchor="middle">DB Upsert</text>
+                  <rect x="360" y="100" width="110" height="48" rx="10" fill="#FBF8F1" stroke="#141414"/>
+                  <text x="415" y="129" text-anchor="middle">Notify Slack</text>
+                  <rect x="200" y="200" width="110" height="48" rx="10" fill="#B84B2A" stroke="#B84B2A"/>
+                  <text x="255" y="229" text-anchor="middle" fill="#FBF8F1">Schedule · 5m</text>
+                  <rect x="40"  y="200" width="110" height="48" rx="10" fill="#FBF8F1" stroke="#141414"/>
+                  <text x="95" y="229" text-anchor="middle">API Pull</text>
+                  <rect x="360" y="200" width="110" height="48" rx="10" fill="#FBF8F1" stroke="#141414"/>
+                  <text x="415" y="229" text-anchor="middle">Enrich</text>
+                </g>
+                <!-- edges -->
+                <g stroke="#141414" stroke-width="1.5" fill="none">
+                  <path d="M150 84 H 200"/>
+                  <path d="M310 84 C 335 84, 335 44, 360 44"/>
+                  <path d="M310 84 C 335 84, 335 124, 360 124"/>
+                  <path d="M150 224 H 200"/>
+                  <path d="M310 224 H 360"/>
+                  <path d="M255 200 V 110"/>
+                </g>
+                <g fill="#141414">
+                  <circle cx="200" cy="84" r="2.5"/><circle cx="360" cy="44" r="2.5"/>
+                  <circle cx="360" cy="124" r="2.5"/><circle cx="200" cy="224" r="2.5"/>
+                  <circle cx="360" cy="224" r="2.5"/>
+                </g>
+                <text x="40" y="290" font-family="JetBrains Mono,monospace" font-size="11" fill="#6B6358" letter-spacing="2">WORKFLOW · n8n · DATA SYNC + ALERTS</text>
+              </svg>
+            </div>
+            <div class="proj-head">
+              <span class="proj-tag" data-i18n="proj2.tag">— Automation</span>
+              <span class="proj-tag muted" data-i18n="proj2.year">2025</span>
+            </div>
+            <h3 class="proj-title" data-i18n="proj2.title">Workflow <em>Automation</em> with n8n</h3>
+            <p class="proj-desc" data-i18n="proj2.desc">
+              Designed and deployed automation workflows in n8n to streamline data synchronization
+              and backend processes — replacing brittle cron + glue scripts with observable, testable
+              pipelines. Handles incoming webhooks, scheduled syncs, enrichment, and alerting.
+            </p>
+            <div class="proj-stack">
+              <span class="chip" data-latin>n8n</span>
+              <span class="chip" data-latin>Webhooks</span>
+              <span class="chip" data-latin>REST</span>
+              <span class="chip" data-i18n="chip.slackEmail">Slack · Email</span>
+              <span class="chip" data-latin>Cron</span>
+            </div>
+          </article>
+
+          <!-- Wajab -->
+          <article class="proj-card reveal">
+            <div class="proj-visual">
+              <svg viewBox="0 0 600 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="600" height="320" fill="#ECE5D6"/>
+                <!-- nav row -->
+                <rect x="40"  y="40"  width="520" height="40" rx="8" fill="#FBF8F1" stroke="#D9CFBC"/>
+                <circle cx="64" cy="60" r="8" fill="#141414"/>
+                <rect x="84"  y="55" width="60" height="10" rx="2" fill="#141414"/>
+                <rect x="460" y="50" width="80" height="20" rx="10" fill="#B84B2A"/>
+                <!-- job cards -->
+                <g>
+                  <rect x="40" y="100" width="246" height="90" rx="10" fill="#FBF8F1" stroke="#D9CFBC"/>
+                  <rect x="56" y="116" width="120" height="10" rx="2" fill="#141414"/>
+                  <rect x="56" y="134" width="180" height="8" rx="2" fill="#6B6358"/>
+                  <rect x="56" y="150" width="80" height="8" rx="2" fill="#6B6358"/>
+                  <rect x="56" y="168" width="60" height="14" rx="7" fill="#ECE5D6" stroke="#D9CFBC"/>
+                  <rect x="122" y="168" width="60" height="14" rx="7" fill="#ECE5D6" stroke="#D9CFBC"/>
+
+                  <rect x="314" y="100" width="246" height="90" rx="10" fill="#FBF8F1" stroke="#D9CFBC"/>
+                  <rect x="330" y="116" width="100" height="10" rx="2" fill="#141414"/>
+                  <rect x="330" y="134" width="180" height="8" rx="2" fill="#6B6358"/>
+                  <rect x="330" y="150" width="120" height="8" rx="2" fill="#6B6358"/>
+                  <rect x="330" y="168" width="60" height="14" rx="7" fill="#B84B2A"/>
+                  <rect x="396" y="168" width="60" height="14" rx="7" fill="#ECE5D6" stroke="#D9CFBC"/>
+
+                  <rect x="40" y="210" width="246" height="64" rx="10" fill="#FBF8F1" stroke="#D9CFBC"/>
+                  <rect x="56" y="226" width="140" height="10" rx="2" fill="#141414"/>
+                  <rect x="56" y="244" width="200" height="8" rx="2" fill="#6B6358"/>
+
+                  <rect x="314" y="210" width="246" height="64" rx="10" fill="#FBF8F1" stroke="#D9CFBC"/>
+                  <rect x="330" y="226" width="100" height="10" rx="2" fill="#141414"/>
+                  <rect x="330" y="244" width="180" height="8" rx="2" fill="#6B6358"/>
+                </g>
+                <text x="40" y="298" font-family="JetBrains Mono,monospace" font-size="11" fill="#6B6358" letter-spacing="2">JOB MARKETPLACE · LARAVEL + VUE</text>
+              </svg>
+            </div>
+            <div class="proj-head">
+              <span class="proj-tag" data-i18n="proj3.tag">— Automata4 Group</span>
+              <span class="proj-tag muted" data-i18n="proj3.label">Production</span>
+            </div>
+            <h3 class="proj-title" data-i18n="proj3.title">Wajab — <em>Job</em> Marketplace</h3>
+            <p class="proj-desc" data-i18n="proj3.desc">
+              Full stack development of a job marketplace connecting employers and candidates.
+              Owned API design, search &amp; filtering, role-based dashboards, application workflows
+              and payment-tier features end-to-end.
+            </p>
+            <div class="proj-stack">
+              <span class="chip" data-latin>Laravel</span>
+              <span class="chip" data-latin>Vue.js</span>
+              <span class="chip" data-latin>MySQL</span>
+              <span class="chip" data-latin>Redis</span>
+              <span class="chip" data-latin>RBAC</span>
+            </div>
+          </article>
+
+          <!-- ZOKA -->
+          <article class="proj-card reveal">
+            <div class="proj-visual">
+              <svg viewBox="0 0 600 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="600" height="320" fill="#ECE5D6"/>
+                <!-- storefront mock -->
+                <rect x="40"  y="40" width="520" height="34" rx="6" fill="#141414"/>
+                <rect x="56"  y="51" width="60" height="12" rx="2" fill="#FBF8F1"/>
+                <rect x="490" y="50" width="56" height="14" rx="7" fill="#B84B2A"/>
+                <!-- product grid -->
+                <g>
+                  <rect x="40"  y="90"  width="160" height="180" rx="10" fill="#FBF8F1" stroke="#D9CFBC"/>
+                  <rect x="56"  y="106" width="128" height="100" rx="6" fill="#ECE5D6"/>
+                  <circle cx="120" cy="156" r="22" fill="#B84B2A" opacity=".25"/>
+                  <rect x="56" y="216" width="100" height="10" rx="2" fill="#141414"/>
+                  <rect x="56" y="234" width="50" height="10" rx="2" fill="#B84B2A"/>
+
+                  <rect x="220" y="90"  width="160" height="180" rx="10" fill="#FBF8F1" stroke="#D9CFBC"/>
+                  <rect x="236" y="106" width="128" height="100" rx="6" fill="#ECE5D6"/>
+                  <rect x="265" y="135" width="40" height="40" fill="#141414"/>
+                  <rect x="236" y="216" width="80" height="10" rx="2" fill="#141414"/>
+                  <rect x="236" y="234" width="60" height="10" rx="2" fill="#B84B2A"/>
+
+                  <rect x="400" y="90"  width="160" height="180" rx="10" fill="#FBF8F1" stroke="#D9CFBC"/>
+                  <rect x="416" y="106" width="128" height="100" rx="6" fill="#ECE5D6"/>
+                  <path d="M450 175 q30 -50 60 0" stroke="#141414" stroke-width="3" fill="none"/>
+                  <rect x="416" y="216" width="90" height="10" rx="2" fill="#141414"/>
+                  <rect x="416" y="234" width="40" height="10" rx="2" fill="#B84B2A"/>
+                </g>
+                <text x="40" y="298" font-family="JetBrains Mono,monospace" font-size="11" fill="#6B6358" letter-spacing="2">ZOKA · E-COMMERCE STOREFRONT + CHECKOUT</text>
+              </svg>
+            </div>
+            <div class="proj-head">
+              <span class="proj-tag" data-i18n="proj4.tag">— Comma</span>
+              <span class="proj-tag muted" data-i18n="proj4.label">Production</span>
+            </div>
+            <h3 class="proj-title" data-i18n="proj4.title">ZOKA — <em>E‑Commerce</em> Platform</h3>
+            <p class="proj-desc" data-i18n="proj4.desc">
+              Built ZOKA from the ground up: catalog, cart, multi-step checkout, payments, order
+              lifecycle and admin tooling. Reactive Vue storefront on top of a clean Laravel API,
+              tuned for fast first paint and a smooth checkout.
+            </p>
+            <div class="proj-stack">
+              <span class="chip" data-latin>Laravel</span>
+              <span class="chip" data-latin>Vue.js</span>
+              <span class="chip" data-latin>MySQL</span>
+              <span class="chip" data-latin>Bootstrap</span>
+              <span class="chip" data-i18n="chip.payments">Payments</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-wrap reveal">
+          <div class="section-head">
+            <span class="section-num" data-i18n="contact.num">05 / Contact</span>
+            <h2 class="section-title" data-i18n="contact.title">Let's <em>build</em> something.</h2>
+            <span class="section-rule" aria-hidden="true"></span>
+          </div>
+
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <p class="contact-lead" data-i18n="contact.lead">
+                Open to <em>full-time, contract</em> and interesting collaborations — especially
+                Laravel/Vue platforms with a real engineering bar.
+              </p>
+
+              <div>
+                <div class="c-row">
+                  <span class="c-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></span>
+                  <span class="c-label" data-i18n="contact.email">Email</span>
+                  <a class="c-val" href="mailto:ashamaryam84@gmail.com"><span class="__cf_email__" data-cfemail="ef8e9c878e828e9d968e82d7dbaf88828e8683c18c8082">ashamaryam84@gmail.com</span></a>
+                </div>
+                <div class="c-row">
+                  <span class="c-icon"><i class="bi bi-telephone-fill" aria-hidden="true"></i></span>
+                  <span class="c-label" data-i18n="contact.phone">Phone</span>
+                  <a class="c-val" href="tel:+963947800974" dir="ltr">+963 947 800 974</a>
+                </div>
+                <div class="c-row">
+                  <span class="c-icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></span>
+                  <span class="c-label" data-i18n="contact.location">Based in</span>
+                  <span class="c-val" data-i18n="contact.locationV">Aleppo, Syria · Remote</span>
+                </div>
+              </div>
+
+              <div class="socials" aria-label="Social links">
+                <a href="https://github.com/maryam-asha" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://linkedin.com/in/maryam-asha" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:ashamaryam84@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <form class="form-card" id="contactForm" novalidate>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label class="form-label" for="cf-name" data-i18n="form.name">Your name</label>
+                    <input class="form-control" type="text" id="cf-name"   required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="cf-email" data-i18n="form.email">Email</label>
+                    <input class="form-control" type="email" id="cf-email"  required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="cf-subject" data-i18n="form.subject">Subject</label>
+                    <input class="form-control" type="text" id="cf-subject" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="cf-message" data-i18n="form.message">Message</label>
+                    <textarea class="form-control" id="cf-message"  required></textarea>
+                  </div>
+                  <div class="col-12 d-flex align-items-center gap-3 flex-wrap">
+                    <button class="btn-send" type="submit">
+                      <i class="bi bi-send-fill" aria-hidden="true"></i>
+                      <span data-i18n="form.send">Send message</span>
+                    </button>
+                    <span id="cf-status" class="mono" style="color: rgba(255,255,255,.55);"></span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="f-inner">
+        <span data-i18n="footer.copy">· <span id="year"></span> Maryam Asha · Crafted in Aleppo</span>
+        <button class="back-top" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n="footer.back">↑ Back to top</button>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap 5 JS bundle -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
