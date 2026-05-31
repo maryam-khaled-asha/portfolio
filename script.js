@@ -13,22 +13,23 @@ const I18N = {
 
     "hero.name": "Maryam<em> Asha</em>",
     "hero.role":
-      'Full Stack Developer building production systems with <span class="stack">Laravel</span> &amp; <span class="stack">Vue.js</span> — where performance and complexity are hard requirements.',
+      'Full Stack Engineer. Backend-heavy systems built to scale — with <span class="stack">Laravel</span> &amp; <span class="stack">Vue.js</span> — where performance and architecture are non-negotiable.',
     "hero.lead":
-      "3+ years building production backends — caching, query optimization, real-time architectures, and AI-integrated search. Engineering foundation that owns the full delivery cycle.",
-    "hero.viewPortfolio": "View Work",
+      "3+ years delivering production Laravel/Vue systems — multi-tenant APIs, real-time pipelines, caching strategy, and AI-integrated search. Full ownership from schema design to deployment.",
+    "hero.hireMe": "Hire Me",
+    "hero.viewPortfolio": "View Projects",
     "hero.downloadCv": "Download CV",
     "hero.card.term": "whoami",
     "hero.card.quote":
-      'Engineer who optimizes <em style="color: var(--accent)">before it is a fire</em> — not after.',
+      'I architect for scale <em style="color: var(--accent)">before the traffic arrives</em> — not after.',
     "hero.card.role.l": "Role",
-    "hero.card.role.v": "Full Stack Dev",
+    "hero.card.role.v": "Full Stack Engineer",
     "hero.card.focus.l": "Focus",
     "hero.card.focus.v": "Laravel · Vue.js",
     "hero.card.exp.l": "Experience",
     "hero.card.exp.v": "3+ yrs",
     "hero.card.addons.l": "Specialty",
-    "hero.card.addons.v": "Real-time · Caching · AI search",
+    "hero.card.addons.v": "Real-time · Multi-tenant · AI-augmented",
 
     "about.num": "01 / About",
     "about.title": "<em>Background</em>, briefly.",
@@ -144,25 +145,25 @@ const I18N = {
     "proj1.year": "2024",
     "proj1.title": "Bilingual <em>Semantic Search</em> Engine",
     "proj1.desc":
-      'Vector search pipeline for a bilingual e-commerce catalog. Keyword search was missing cross-matches — "حذاء رياضي" missed "sneakers". Built on multilingual-e5-large-instruct + Qdrant; both languages in the same vector space. Chose e5-large after measuring Arabic morphology loss on lighter models.',
+      'Keyword search on a bilingual e-commerce catalog was silently missing valid matches — "حذاء رياضي" returned zero results for "sneakers". Replaced it with a vector pipeline on multilingual-e5-large-instruct + Qdrant, embedding Arabic and English into a single shared space. Evaluated lighter models first; e5-large-instruct won on Arabic morphology and dialect handling. Cross-language retrieval, synonym tolerance, and misspelling resilience — all resolved at the embedding layer.',
 
     "proj2.tag": "— Automation",
     "proj2.year": "2024 — Present",
     "proj2.title": "Production <em>Workflow</em> Automation",
     "proj2.desc":
-      "n8n workflows replacing fragile cron-and-glue setups. Order-lifecycle notifications fan out across customer/store/warehouse on every ZOKA state. SLA-breach detection on Wajab auto-escalates to department heads. Retries, dead-letter handling, and a UI for non-developers — without server access.",
+      "Brittle cron + shell-script pipelines were failing silently — no observability, no retries. Redesigned as event-driven n8n workflows: order-lifecycle notifications fan out to customer/store/warehouse on every state transition, and SLA-breach detection auto-escalates to department heads. Dead-letter queues, automatic retries, and a no-code UI included — ops manages and debugs workflows without server access or engineering involvement.",
 
     "proj3.tag": "— Automata4",
     "proj3.label": "Production · Government",
     "proj3.title": "Wajab — <em>Complaint</em> Platform",
     "proj3.desc":
-      "Multi-tenant platform routing citizen complaints across government levels. Redis + Laravel Octane → 30% API speedup, sub-second p95. JMeter-validated at 500 concurrent users before launch. Telegram bot as a parallel entry point — file from where you already are.",
+      "Multi-tenant platform routing citizen complaints across government administrative levels — designed for concurrent load from day one. Tuned hot paths with Redis caching and Octane's persistent-worker model; validated at 500 concurrent users under JMeter before launch. Result: 30% reduction in API response time, sub-second p95 on core endpoints. Telegram bot added as a parallel entry point — citizens file without leaving the channel they already use.",
 
     "proj4.tag": "— Comma",
     "proj4.label": "Production · Marketplace",
     "proj4.title": "ZOKA — <em>Multi-tenant</em> Marketplace",
     "proj4.desc":
-      'Multi-store orchestration, dual-currency wallets, infinite-depth categories, real-time fanout across 5 actor types. A single order can span multiple stores: split → warehouse routing → reassembly → dispatch → automatic wallet crediting. The customer sees "on the way" — underneath, an 8-stage pipeline.',
+      'A single customer order can span multiple stores, currencies, and fulfillment actors — the complexity is invisible to the end user. Engineered an 8-stage order pipeline (split → warehouse routing → reassembly → dispatch → wallet crediting) with real-time state fanout to 5 actor types via Laravel Reverb. Dual-currency wallets (USD + SYP) credit stores atomically on delivery. Built for operational scale without proportional ops overhead.',
 
     "chip.payments": "Payments",
     "chip.product": "Product",
@@ -178,21 +179,7 @@ const I18N = {
     "contact.phone": "Phone",
     "contact.location": "Based in",
     "contact.locationV": "Aleppo, Syria · Remote",
-
-    "form.name": "Your name",
-    "form.namePh": "Jane Doe",
-    "form.email": "Email",
-    "form.emailPh": "jane@company.com",
-    "form.subject": "Subject",
-    "form.subjectPh": "What are we building?",
-    "form.message": "Message",
-    "form.messagePh":
-      "A few sentences about the project, timeline and stack…",
-    "form.send": "Send message",
-    "form.errMissing": "— please fill in name, email and message.",
-    "form.sending": "— sending…",
-    "form.sent": "✓ thanks — I'll get back to you within 24h.",
-    "form.cvSoon": '<i class="bi bi-check2"></i> CV link coming soon',
+    "contact.btn.email": "Email Me",
 
     "footer.copy": "© {year} Maryam Asha ·  All rights reserved",
     "footer.back": "↑ Back to top",
@@ -230,22 +217,23 @@ const I18N = {
 
     "hero.name": "مريم<em> عشا</em>",
     "hero.role":
-      'مطوّرة Full Stack تبني أنظمة إنتاج بـ <span class="stack">Laravel</span> و<span class="stack">Vue.js</span> — حيث الأداء والتعقيد متطلّبان أساسيّان لا رفاهية.',
+      'مهندسة Full Stack. أنظمة خلفيّة كثيفة مبنيّة للتوسّع — بـ <span class="stack">Laravel</span> و<span class="stack">Vue.js</span> — حيث الأداء والمعمارية شرطٌ لا رفاهية.',
     "hero.lead":
-      "أكثر من ٣ سنوات في بناء أنظمة خلفيّة إنتاجيّة — تخزين مؤقّت، تحسين استعلامات، بُنى لحظيّة، وبحث دلالي ذكي. بأساسٍ هندسيّ يغطّي دورة التسليم كاملةً.",
-    "hero.viewPortfolio": "استعرض الأعمال",
+      "أكثر من ٣ سنوات في تسليم أنظمة Laravel/Vue إنتاجيّة — APIs متعدّدة المستأجرين، أنابيب لحظيّة، تخزين مؤقّت، وبحث مدعوم بالذكاء الاصطناعي. ملكيّة كاملة من تصميم Schema حتى النشر.",
+    "hero.hireMe": "وظّفني",
+    "hero.viewPortfolio": "استعرض المشاريع",
     "hero.downloadCv": "تحميل السيرة الذاتية",
     "hero.card.term": "whoami",
     "hero.card.quote":
-      'مهندسة تُحسِّن الأداء <em style="color: var(--accent)">قبل اشتعال الحريق</em> — لا بعده.',
+      'أُصمّم للتوسّع <em style="color: var(--accent)">قبل وصول الحمل</em> — لا بعده.',
     "hero.card.role.l": "الدور",
-    "hero.card.role.v": "مطوّرة Full Stack",
+    "hero.card.role.v": "مهندسة Full Stack",
     "hero.card.focus.l": "التخصّص",
     "hero.card.focus.v": "Laravel · Vue.js",
     "hero.card.exp.l": "الخبرة",
     "hero.card.exp.v": "+٣ سنوات",
     "hero.card.addons.l": "المجال",
-    "hero.card.addons.v": "لحظي · تخزين · بحث ذكي",
+    "hero.card.addons.v": "لحظي · متعدّد المستأجرين · ذكاء اصطناعي",
 
     "about.num": "٠١ / نبذة",
     "about.title": "<em>الخلفية</em>، باختصار.",
@@ -361,25 +349,25 @@ const I18N = {
     "proj1.year": "٢٠٢٤",
     "proj1.title": "محرّك <em>بحث دلالي</em> ثنائي اللغة",
     "proj1.desc":
-      'سلسلة بحث متجهي لكتالوج ثنائي اللغة — البحث بالكلمات كان يفوّت تطابقات ("حذاء رياضي" يفوّت "sneakers"). مبني على multilingual-e5-large-instruct مع Qdrant؛ اللغتان في فضاء واحد. اخترتُ e5-large بعد قياس فقدان الصرف العربي على النماذج الأخفّ.',
+      'بحث الكلمات المفتاحية في كتالوج ثنائي اللغة كان يفوّت تطابقات صحيحة بصمت — "حذاء رياضي" لا تُعيد "sneakers". استبدلتُه بسلسلة بحث متجهي على multilingual-e5-large-instruct + Qdrant، تُضمِّن العربية والإنجليزية في فضاء مشترك واحد. قيّمتُ نماذج أخفّ أولاً؛ فاز e5-large-instruct في الصرف العربي واللهجات. الاسترجاع متعدّد اللغات، التسامح مع المرادفات والأخطاء — كلّها مُعالَجة عند طبقة التضمين.',
 
     "proj2.tag": "— أتمتة",
     "proj2.year": "٢٠٢٤ — حتى الآن",
     "proj2.title": "<em>أتمتة</em> سير العمل الإنتاجي",
     "proj2.desc":
-      "سلاسل أتمتة n8n تستبدل بنى الكرون-والنصوص الهشّة. إشعارات دورة حياة الطلبات تتفرّع للعميل/المتجر/المستودع عند كلّ انتقال في ZOKA. كشف خرق الـ SLA في Wajab يُصعّد تلقائيًا. إعادات، طوابير فشل، وواجهة لغير المطوّرين — دون وصول للسيرفر.",
+      "أنابيب كرون ونصوص هشّة كانت تفشل بصمت — لا رؤية، لا إعادات. أعدتُ تصميمها كسلاسل n8n مدفوعة بالأحداث: إشعارات دورة حياة الطلبات تتفرّع للعميل/المتجر/المستودع عند كلّ انتقال، وكشف خرق الـ SLA يُصعّد تلقائيًا لرؤساء الأقسام. طوابير فشل، إعادات تلقائية، وواجهة بدون كود — الفريق التشغيلي يُدير السلاسل دون تدخّل هندسي أو وصول للسيرفر.",
 
     "proj3.tag": "— Automata4",
     "proj3.label": "إنتاج · حكومي",
     "proj3.title": "Wajab — منصّة <em>الشكاوى</em>",
     "proj3.desc":
-      "منصّة متعدّدة المستأجرين تُوجّه شكاوى المواطنين عبر مستويات حكوميّة متعدّدة. Redis مع Laravel Octane ← تسريع APIs بنسبة ٣٠٪، p95 دون الثانية. اختبار JMeter عند ٥٠٠ مستخدم متزامن قبل الإطلاق. روبوت Telegram كمدخل مواز — التقديم من حيث أنت بالفعل.",
+      "منصّة متعدّدة المستأجرين تُوجّه شكاوى المواطنين عبر مستويات حكوميّة — مُصمَّمة لتحمّل الحمل المتزامن من اليوم الأول. ضبطتُ المسارات الساخنة بتخزين Redis مؤقّت ونموذج العامل الدائم في Octane؛ اختُبرت بـ JMeter عند ٥٠٠ مستخدم متزامن قبل الإطلاق. النتيجة: تحسّن ٣٠٪ في زمن الاستجابة، p95 دون الثانية. روبوت Telegram كمدخل مواز — التقديم دون مغادرة القناة المعتادة.",
 
     "proj4.tag": "— Comma",
     "proj4.label": "إنتاج · سوق",
     "proj4.title": "ZOKA — سوق <em>متعدّد المستأجرين</em>",
     "proj4.desc":
-      'تنسيق طلبات متعدّدة المتاجر، محافظ ثنائيّة العملة، تشجير فئات لا نهائي، إشعارات لحظيّة عبر خمسة أنواع من المستخدمين. طلب واحد قد يضمّ منتجات من متاجر متعدّدة: تقسيم ← توجيه ← إعادة تجميع ← إرسال ← إيداع تلقائي. العميل يرى "في الطريق" — تحت السطح، سلسلة بثماني مراحل.',
+      'طلب عميل واحد قد يضمّ منتجات من متاجر وعملات وجهات تنفيذ متعدّدة — التعقيد غير مرئيّ للمستخدم النهائي. صمّمتُ سلسلة طلبات بثماني مراحل (تقسيم ← توجيه ← إعادة تجميع ← إرسال ← إيداع) مع إشعارات لحظيّة لخمسة أنواع من المستخدمين عبر Laravel Reverb. محافظ ثنائيّة العملة (USD + SYP) تُودع رصيد المتجر ذريًّا عند التسليم. مبنيّ لتحمّل النموّ التشغيلي دون زيادة متناسبة في التعقيد.',
 
     "chip.payments": "الدفع",
     "chip.product": "منتج",
@@ -395,21 +383,7 @@ const I18N = {
     "contact.phone": "الهاتف",
     "contact.location": "المقر",
     "contact.locationV": "حلب،سوريا ",
-
-    "form.name": "الاسم",
-    "form.namePh": "مثال: أحمد علي",
-    "form.email": "البريد الإلكتروني",
-    "form.emailPh": "name@company.com",
-    "form.subject": "الموضوع",
-    "form.subjectPh": "ما الذي سنبنيه معًا؟",
-    "form.message": "الرسالة",
-    "form.messagePh":
-      "وصف موجز للمشروع والجدول الزمني والتقنيات…",
-    "form.send": "إرسال الرسالة",
-    "form.errMissing": "— يُرجى تعبئة الاسم والبريد والرسالة.",
-    "form.sending": "— جارٍ الإرسال…",
-    "form.sent": "✓ شكرًا — سأعود إليكم خلال ٢٤ ساعة.",
-    "form.cvSoon": '<i class="bi bi-check2"></i> رابط السيرة الذاتية قريبًا',
+    "contact.btn.email": "راسلني",
 
     "footer.copy": "© {year} مريم عشا . جميع الحقوق محفوظة",
     "footer.back": "↑ العودة إلى الأعلى",
@@ -709,43 +683,91 @@ const barIo = new IntersectionObserver(
 document.querySelectorAll(".skill-group").forEach((el) => barIo.observe(el));
 
 /* ==========================================================================
-       6) Download CV placeholder
+       6) Download CV  —  force a real file download (never open inline).
+          The PDF is embedded as base64 in cv-data.js, so we decode it into
+          a Blob and save it. This works everywhere — including when the page
+          is opened directly from disk (file://), where fetch is blocked and
+          the browser would otherwise just preview the PDF.
        ========================================================================== */
-document.getElementById("downloadCv").addEventListener("click", (e) => {
-  e.preventDefault();
-  const span = e.currentTarget.querySelector("span");
-  const original = span.innerHTML;
-  const dict = I18N[lang] || I18N.en;
-  span.innerHTML = dict["form.cvSoon"];
-  setTimeout(() => {
-    span.innerHTML = original;
-  }, 1800);
+function saveBlob(blob, filename) {
+  const objectUrl = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = objectUrl;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+}
+
+function base64ToBlob(base64, type) {
+  const bytes = atob(base64);
+  const arr = new Uint8Array(bytes.length);
+  for (let i = 0; i < bytes.length; i++) arr[i] = bytes.charCodeAt(i);
+  return new Blob([arr], { type });
+}
+
+document.querySelectorAll(".js-download-cv").forEach((btn) => {
+  btn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const filename = btn.getAttribute("download") || "CV.pdf";
+
+    // Primary: decode the embedded base64 — no server needed, always downloads.
+    if (typeof window.CV_BASE64 === "string" && window.CV_BASE64.length) {
+      saveBlob(base64ToBlob(window.CV_BASE64, "application/pdf"), filename);
+      return;
+    }
+
+    // Fallback: fetch the file from its URL (works when served over http/https).
+    const url = btn.getAttribute("href");
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("fetch failed");
+      saveBlob(await res.blob(), filename);
+    } catch (_) {
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+  });
 });
 
 /* ==========================================================================
-       7) Contact form
+       7) Copy email to clipboard  —  one-click for recruiters.
        ========================================================================== */
-const form = document.getElementById("contactForm");
-const status = document.getElementById("cf-status");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const dict = I18N[lang] || I18N.en;
-  const name = document.getElementById("cf-name").value.trim();
-  const email = document.getElementById("cf-email").value.trim();
-  const msg = document.getElementById("cf-message").value.trim();
-  if (!name || !email || !msg) {
-    status.textContent = dict["form.errMissing"];
-    status.style.color = "#E8A88E";
-    return;
-  }
-  status.textContent = dict["form.sending"];
-  status.style.color = "rgba(255,255,255,.55)";
-  setTimeout(() => {
-    status.textContent = dict["form.sent"];
-    status.style.color = "#9DDFBF";
-    form.reset();
-  }, 900);
-});
+const copyEmailBtn = document.getElementById("copyEmail");
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener("click", async () => {
+    const email = copyEmailBtn.dataset.email || "";
+    const icon = copyEmailBtn.querySelector(".c-copy-icon");
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        // Fallback for non-secure contexts (e.g. opened from file://)
+        const tmp = document.createElement("textarea");
+        tmp.value = email;
+        tmp.style.position = "fixed";
+        tmp.style.opacity = "0";
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand("copy");
+        document.body.removeChild(tmp);
+      }
+      copyEmailBtn.classList.add("copied");
+      if (icon) icon.className = "bi bi-check2 c-copy-icon";
+      setTimeout(() => {
+        copyEmailBtn.classList.remove("copied");
+        if (icon) icon.className = "bi bi-clipboard c-copy-icon";
+      }, 1800);
+    } catch (_) {
+      /* clipboard unavailable — the mailto button is still there */
+    }
+  });
+}
 
 /* ==========================================================================
        8) PREMIUM SIGNATURE — scroll progress, parallax grain,

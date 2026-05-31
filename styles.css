@@ -21,9 +21,6 @@
       --grain-opacity: .35;
       --grain-blend:   multiply;
       --chip-bg:       var(--bg-2);
-      --form-bg:       rgba(255,255,255,.04);
-      --form-line:     rgba(255,255,255,.22);
-      --form-muted:    rgba(255,255,255,.55);
 
       --f-serif:  "Instrument Serif", "Cormorant Garamond", Georgia, serif;
       --f-sans:   "Geist", system-ui, -apple-system, "Helvetica Neue", sans-serif;
@@ -55,9 +52,6 @@
       --grain-opacity: .55;
       --grain-blend:   screen;
       --chip-bg:       #25252B;
-      --form-bg:       rgba(255,255,255,.03);
-      --form-line:     rgba(255,255,255,.22);
-      --form-muted:    rgba(235,234,230,.55);
 
       color-scheme: dark;
     }
@@ -71,26 +65,14 @@
     [data-theme="dark"] .contact-wrap .contact-lead,
     [data-theme="dark"] .contact-wrap .c-row .c-val,
     [data-theme="dark"] .contact-wrap .c-row .c-icon,
-    [data-theme="dark"] .contact-wrap .socials a {
+    [data-theme="dark"] .contact-wrap .contact-btn {
       color: #F4EFE6;
     }
-    [data-theme="dark"] .contact-wrap .form-card .form-control,
-    [data-theme="dark"] .contact-wrap .form-card .form-control:focus {
-      color: #F4EFE6;
-    }
-    [data-theme="dark"] .contact-wrap .form-card .form-control::placeholder {
-      color: rgba(244, 239, 230, .35);
-    }
-    [data-theme="dark"] .contact-wrap .form-card .btn-send {
-      background: #F4EFE6;
+    [data-theme="dark"] .contact-wrap .contact-btn.primary {
       color: #141414;
     }
-    [data-theme="dark"] .contact-wrap .form-card .btn-send:hover {
-      background: var(--accent);
-      color: #F4EFE6;
-    }
     [data-theme="dark"] .contact-wrap .c-row a.c-val:hover,
-    [data-theme="dark"] .contact-wrap .socials a:hover {
+    [data-theme="dark"] .contact-wrap .c-copy:hover {
       color: #E8A88E;
     }
     [data-theme="dark"] .nav-bar.scrolled { border-bottom-color: var(--line); }
@@ -101,8 +83,6 @@
     [data-theme="dark"] .btn-ghost:hover { background: var(--ink); color: var(--bg); }
     [data-theme="dark"] .nav-cta { border-color: var(--ink); color: var(--ink); }
     [data-theme="dark"] .nav-cta:hover { background: var(--ink); color: var(--bg); }
-    [data-theme="dark"] .form-card .btn-send { background: var(--ink); color: var(--bg); }
-    [data-theme="dark"] .form-card .btn-send:hover { background: var(--accent); color: #fff; }
     [data-theme="dark"] ::selection { background: var(--accent); color: #fff; }
 
     /* ============================================================
@@ -255,9 +235,9 @@
     .edu-card,
     .skill-group       { transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease; }
     .chip,
-    .socials a,
+    .contact-btn,
     .c-row a           { transition: all .3s ease; }
-    .btn-ink, .btn-ghost, .nav-cta, .icon-btn, .btn-send { transition: all .3s ease; }
+    .btn-ink, .btn-ghost, .nav-cta, .icon-btn { transition: all .3s ease; }
 
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
@@ -299,8 +279,7 @@
     html[lang="ar"] .nav-cta,
     html[lang="ar"] .btn-ink,
     html[lang="ar"] .btn-ghost,
-    html[lang="ar"] .btn-send,
-    html[lang="ar"] .form-label,
+    html[lang="ar"] .contact-btn,
     html[lang="ar"] .section-num,
     html[lang="ar"] .proj-tag,
     html[lang="ar"] .tl-meta,
@@ -578,6 +557,9 @@
       flex: 1;
       height: 1px;
       margin-bottom: .6em;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 1.1s var(--ease-premium, cubic-bezier(0.25, 1, 0.5, 1)) .32s;
       background: linear-gradient(
         to right,
         var(--line) 0%,
@@ -608,7 +590,10 @@
       opacity: 1;
       transform: translate(50%, -50%) scale(1.25);
     }
+    .section-head.in .section-rule { transform: scaleX(1); }
+
     [dir="rtl"] .section-rule {
+      transform-origin: right center;
       background: linear-gradient(
         to left,
         var(--line) 0%,
@@ -865,6 +850,18 @@
       box-shadow: 0 0 10px rgba(232, 168, 142, .55);
     }
 
+    /* Contact section-rule fires from the wrap's .in (no .reveal on section-head) */
+    .contact-wrap.in .section-rule { transform: scaleX(1); }
+    [dir="rtl"] .contact-wrap .section-rule { transform-origin: right center; }
+
+    /* Stagger left/right columns as the wrap enters view */
+    .contact-wrap .row > [class*="col-"] {
+      transform: translateY(24px);
+      transition: transform .85s var(--ease-premium, cubic-bezier(0.25, 1, 0.5, 1));
+    }
+    .contact-wrap.in .row > [class*="col-"]:nth-child(1) { transform: none; transition-delay: .48s; }
+    .contact-wrap.in .row > [class*="col-"]:nth-child(2) { transform: none; transition-delay: .72s; }
+
     .contact-lead {
       font-family: var(--f-serif); font-size: 1.5rem; line-height: 1.45;
       color: var(--bg); max-width: 38ch; margin-bottom: 30px;
@@ -887,54 +884,53 @@
     .c-row .c-label { color: rgba(255,255,255,.5); margin-right: auto; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; }
     .c-row .c-val { color: var(--bg); }
     .c-row a:hover { color: #E8A88E; }
+    [dir="rtl"] .c-row .c-label { margin-right: 0; margin-left: auto; }
 
-    .socials { display: flex; gap: 10px; margin-top: 24px; }
-    .socials a {
-      width: 42px; height: 42px; border-radius: 50%;
-      display: inline-flex; align-items: center; justify-content: center;
-      background: rgba(255,255,255,.08);
-      color: var(--bg); font-size: 1.05rem;
-      transition: background .2s, transform .2s;
+    /* Click-to-copy email */
+    .c-copy {
+      background: transparent; border: 0; padding: 0; cursor: pointer;
+      font-family: inherit; font-size: inherit; color: var(--bg);
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: color .2s ease;
     }
-    .socials a:hover { background: var(--accent); transform: translateY(-2px); color: var(--bg); }
+    .c-copy .c-copy-icon { font-size: .92rem; opacity: .5; transition: opacity .2s, color .2s; }
+    .c-copy:hover { color: #E8A88E; }
+    .c-copy:hover .c-copy-icon { opacity: 1; color: #E8A88E; }
+    .c-copy.copied { color: #9DDFBF; }
+    .c-copy.copied .c-copy-icon { color: #9DDFBF; opacity: 1; }
 
-    /* Form */
-    .form-card {
-      background: var(--form-bg);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 16px;
-      padding: 32px;
+    /* Contact action buttons (replaces the old contact form) */
+    .contact-actions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
-    .form-card .form-label {
-      font-family: var(--f-mono); font-size: .68rem;
-      text-transform: uppercase; letter-spacing: .14em;
-      color: rgba(255,255,255,.55); margin-bottom: 6px;
-    }
-    .form-card .form-control {
-      background: transparent;
-      border: 0;
-      border-bottom: 1px solid rgba(255,255,255,.22);
-      border-radius: 0;
+    .contact-btn {
+      display: inline-flex; align-items: center; gap: .7rem;
+      padding: 18px 22px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.04);
       color: var(--bg);
-      font-family: var(--f-sans); font-size: 1rem;
-      padding: 8px 0 12px;
+      font-family: var(--f-mono); font-size: .78rem;
+      text-transform: uppercase; letter-spacing: .1em;
+      transition: transform .35s var(--ease-premium), background .3s ease, border-color .3s ease, color .3s ease;
     }
-    .form-card .form-control:focus {
-      background: transparent; color: var(--bg);
-      border-color: var(--accent);
-      box-shadow: none;
+    .contact-btn i { font-size: 1.15rem; color: #E8A88E; transition: color .3s ease; }
+    .contact-btn:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.09);
+      border-color: rgba(232,168,142,.5);
+      color: var(--bg);
     }
-    .form-card .form-control::placeholder { color: rgba(255,255,255,.3); }
-    .form-card textarea.form-control { min-height: 120px; resize: vertical; }
-    .form-card .btn-send {
-      display: inline-flex; align-items: center; gap: .55rem;
-      padding: 14px 24px; border-radius: 999px;
-      background: var(--bg); color: var(--ink);
-      font-family: var(--f-mono); font-size: .76rem;
-      text-transform: uppercase; letter-spacing: .12em;
-      border: 0; transition: all .2s;
+    .contact-btn.primary { background: #E8A88E; border-color: #E8A88E; color: var(--ink); }
+    .contact-btn.primary i { color: var(--ink); }
+    .contact-btn.primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .contact-btn.primary:hover i { color: #fff; }
+    @media (max-width: 575px) {
+      .contact-actions { grid-template-columns: 1fr; }
+      .contact-btn { padding: 16px 20px; }
     }
-    .form-card .btn-send:hover { background: var(--accent); color: var(--bg); }
 
     /* ============================================================
        FOOTER
@@ -1078,7 +1074,7 @@
        Each button declares its own --btn-fill / --btn-fg colors;
        a pseudo-element slides up to deliver the new color smoothly.
        ------------------------------------------------------------ */
-    .btn-ink, .btn-ghost, .btn-send, .nav-cta {
+    .btn-ink, .btn-ghost, .nav-cta {
       position: relative;
       overflow: hidden;
       isolation: isolate;
@@ -1090,14 +1086,12 @@
     }
     .btn-ink   { --btn-fill: var(--accent); --btn-fg: #fff; }
     .btn-ghost { --btn-fill: var(--ink);    --btn-fg: var(--bg); }
-    .btn-send  { --btn-fill: var(--accent); --btn-fg: var(--bg); }
     .nav-cta   { --btn-fill: var(--ink);    --btn-fg: var(--bg); }
     [data-theme="dark"] .btn-ink   { --btn-fill: var(--accent); --btn-fg: #fff; }
     [data-theme="dark"] .btn-ghost { --btn-fill: var(--ink);    --btn-fg: var(--bg); }
-    [data-theme="dark"] .btn-send  { --btn-fill: var(--accent); --btn-fg: #fff; }
     [data-theme="dark"] .nav-cta   { --btn-fill: var(--ink);    --btn-fg: var(--bg); }
 
-    .btn-ink::before, .btn-ghost::before, .btn-send::before, .nav-cta::before {
+    .btn-ink::before, .btn-ghost::before, .nav-cta::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -1106,21 +1100,20 @@
       transition: transform .6s var(--ease-premium);
       z-index: -1;
     }
-    .btn-ink > *, .btn-ghost > *, .btn-send > *, .nav-cta > * { position: relative; z-index: 1; }
+    .btn-ink > *, .btn-ghost > *, .nav-cta > * { position: relative; z-index: 1; }
 
-    .btn-ink:hover, .btn-ghost:hover, .btn-send:hover, .nav-cta:hover {
+    .btn-ink:hover, .btn-ghost:hover, .nav-cta:hover {
       color: var(--btn-fg);
       border-color: var(--btn-fill);
       transform: translateY(-2px);
       box-shadow: 0 14px 30px -16px rgba(20,20,20,.28);
     }
     .btn-ink:hover::before, .btn-ghost:hover::before,
-    .btn-send:hover::before, .nav-cta:hover::before {
+    .nav-cta:hover::before {
       transform: translateY(0);
     }
     [data-theme="dark"] .btn-ink:hover,
     [data-theme="dark"] .btn-ghost:hover,
-    [data-theme="dark"] .btn-send:hover,
     [data-theme="dark"] .nav-cta:hover {
       box-shadow: 0 14px 30px -16px rgba(0,0,0,.55);
     }
@@ -1207,9 +1200,9 @@
     .chip:hover { transform: translateY(-1px); }
 
     /* ------------------------------------------------------------
-       10. Socials & icon buttons — magnetic feel
+       10. Icon buttons — magnetic feel
        ------------------------------------------------------------ */
-    .socials a, .icon-btn {
+    .icon-btn {
       transition:
         background-color .35s var(--ease-premium),
         color            .35s var(--ease-premium),
@@ -1217,7 +1210,6 @@
         transform        .45s var(--ease-spring),
         box-shadow       .45s var(--ease-premium);
     }
-    .socials a:hover { transform: translateY(-3px) scale(1.04); }
     .icon-btn:hover  { transform: translateY(-1px); box-shadow: 0 8px 20px -10px rgba(20,20,20,.25); }
 
     /* ------------------------------------------------------------
@@ -1365,7 +1357,7 @@
     @media (prefers-reduced-motion: reduce) {
       .scroll-progress__fill { transition: none; }
       body::before { transform: none !important; transition: none !important; }
-      .btn-ink::before, .btn-ghost::before, .btn-send::before, .nav-cta::before,
+      .btn-ink::before, .btn-ghost::before, .nav-cta::before,
       .proj-card::before { transition: none; }
       html.is-switching main,
       html.is-switching .hero-strip { opacity: 1 !important; filter: none !important; }
