@@ -16,7 +16,7 @@ const I18N = {
       'Full Stack Engineer. Backend-heavy systems built to scale — with <span class="stack">Laravel</span> &amp; <span class="stack">Vue.js</span> — where performance and architecture are non-negotiable.',
     "hero.lead":
       "3+ years delivering production Laravel/Vue systems — multi-tenant APIs, real-time pipelines, caching strategy, and AI-integrated search. Full ownership from schema design to deployment.",
-    "hero.hireMe": "Hire Me",
+    "hero.hireMe": "Let's Work Together",
     "hero.viewPortfolio": "View Projects",
     "hero.downloadCv": "Download CV",
     "hero.card.term": "whoami",
@@ -220,7 +220,7 @@ const I18N = {
       'مهندسة Full Stack. أنظمة خلفيّة كثيفة مبنيّة للتوسّع — بـ <span class="stack">Laravel</span> و<span class="stack">Vue.js</span> — حيث الأداء والمعمارية شرطٌ لا رفاهية.',
     "hero.lead":
       "أكثر من ٣ سنوات في تسليم أنظمة Laravel/Vue إنتاجيّة — APIs متعدّدة المستأجرين، أنابيب لحظيّة، تخزين مؤقّت، وبحث مدعوم بالذكاء الاصطناعي. ملكيّة كاملة من تصميم Schema حتى النشر.",
-    "hero.hireMe": "وظّفني",
+    "hero.hireMe": "لنعمل معًا",
     "hero.viewPortfolio": "استعرض المشاريع",
     "hero.downloadCv": "تحميل السيرة الذاتية",
     "hero.card.term": "whoami",
@@ -287,9 +287,9 @@ const I18N = {
     "exp.num": "٠٣ / الخبرة",
     "exp.title": "أين <em>أطلقتُ</em> أعمالي.",
 
-    "exp1.tag": "٢٠٢ — حتى الآن",
+    "exp1.tag": "٢٠٢٣ — حتى الآن",
     "exp1.role": "مطوّرة Full Stack",
-    "exp1.location": "حلب ",
+    "exp1.location": "حلب",
     "exp1.company": "مجموعة Automata4",
     "exp1.companySub": "— Wajab و Katateeb",
     "exp1.body":
@@ -382,7 +382,7 @@ const I18N = {
     "contact.email": "البريد",
     "contact.phone": "الهاتف",
     "contact.location": "المقر",
-    "contact.locationV": "حلب،سوريا ",
+    "contact.locationV": "حلب، سوريا · عن بُعد",
     "contact.btn.email": "راسلني",
 
     "footer.copy": "© {year} مريم عشا . جميع الحقوق محفوظة",
@@ -684,10 +684,9 @@ document.querySelectorAll(".skill-group").forEach((el) => barIo.observe(el));
 
 /* ==========================================================================
        6) Download CV  —  force a real file download (never open inline).
-          The PDF is embedded as base64 in cv-data.js, so we decode it into
-          a Blob and save it. This works everywhere — including when the page
-          is opened directly from disk (file://), where fetch is blocked and
-          the browser would otherwise just preview the PDF.
+          The PDF ships as a static file; we fetch it into a Blob and save it
+          so the browser downloads rather than previews. Falls back to a plain
+          download link if fetch is unavailable.
        ========================================================================== */
 function saveBlob(blob, filename) {
   const objectUrl = URL.createObjectURL(blob);
@@ -700,31 +699,19 @@ function saveBlob(blob, filename) {
   setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
 }
 
-function base64ToBlob(base64, type) {
-  const bytes = atob(base64);
-  const arr = new Uint8Array(bytes.length);
-  for (let i = 0; i < bytes.length; i++) arr[i] = bytes.charCodeAt(i);
-  return new Blob([arr], { type });
-}
-
 document.querySelectorAll(".js-download-cv").forEach((btn) => {
   btn.addEventListener("click", async (e) => {
     e.preventDefault();
     const filename = btn.getAttribute("download") || "CV.pdf";
-
-    // Primary: decode the embedded base64 — no server needed, always downloads.
-    if (typeof window.CV_BASE64 === "string" && window.CV_BASE64.length) {
-      saveBlob(base64ToBlob(window.CV_BASE64, "application/pdf"), filename);
-      return;
-    }
-
-    // Fallback: fetch the file from its URL (works when served over http/https).
     const url = btn.getAttribute("href");
+
+    // Fetch the file and save as a Blob (works when served over http/https).
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error("fetch failed");
       saveBlob(await res.blob(), filename);
     } catch (_) {
+      // Fallback: plain download link.
       const a = document.createElement("a");
       a.href = url;
       a.download = filename;
