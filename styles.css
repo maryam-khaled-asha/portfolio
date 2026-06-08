@@ -451,7 +451,6 @@ html[lang="ar"] .contact-btn,
 html[lang="ar"] .section-num,
 html[lang="ar"] .proj-tag,
 html[lang="ar"] .tl-meta,
-html[lang="ar"] .hero-strip,
 html[lang="ar"] footer,
 html[lang="ar"] .chip,
 html[lang="ar"] .hero-eyebrow {
@@ -498,13 +497,6 @@ html[lang="ar"] .stack-name {
 [dir="rtl"] .hero-card .term-line::after {
   content: " $";
   color: var(--accent);
-}
-[dir="rtl"] .hero-strip .marquee {
-  animation-direction: reverse;
-}
-[dir="rtl"] .hero-strip .marquee span::after {
-  margin-left: 0;
-  margin-right: 3rem;
 }
 [dir="rtl"] .nav-cta i.bi-arrow-up-right {
   transform: scaleX(-1);
@@ -870,10 +862,14 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.68rem;
+  flex-shrink: 0;
+  padding-top: 0.1em;
 }
 .hero-card .h-row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 1.25rem;
   padding: 10px 0;
   border-bottom: 1px dashed var(--line);
 }
@@ -883,6 +879,7 @@ a:hover {
 .hero-card .h-row .v {
   color: var(--ink);
   font-weight: 500;
+  text-align: end;
 }
 .hero-card .term-line {
   color: var(--muted);
@@ -892,46 +889,6 @@ a:hover {
   color: var(--accent);
 }
 
-/* Marquee underline of hero */
-.hero-strip {
-  display: flex;
-  gap: 3rem;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  padding: 14px 0;
-  font-family: var(--f-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-}
-.hero-strip .marquee {
-  display: inline-flex;
-  gap: 3rem;
-  animation: marquee 38s linear infinite;
-  white-space: nowrap;
-}
-.hero-strip .marquee span {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-}
-.hero-strip .marquee span::after {
-  content: "✦";
-  color: var(--accent);
-  margin-left: 3rem;
-}
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 
 /* ============================================================
        SECTIONS
@@ -1834,8 +1791,7 @@ body::before {
        ------------------------------------------------------------ */
 main,
 .nav-bar,
-footer,
-.hero-strip {
+footer {
   transition:
     opacity 0.45s var(--ease-premium),
     filter 0.45s var(--ease-premium),
@@ -1843,8 +1799,7 @@ footer,
     color 0.55s var(--ease-premium),
     border-color 0.55s var(--ease-premium);
 }
-html.is-switching main,
-html.is-switching .hero-strip {
+html.is-switching main {
   opacity: 0;
   filter: blur(3px);
 }
@@ -2118,31 +2073,6 @@ body {
 }
 
 /* ------------------------------------------------------------
-       11. Hero strip — feather the edges so the marquee feels infinite
-       ------------------------------------------------------------ */
-.hero-strip {
-  position: relative;
-}
-.hero-strip::before,
-.hero-strip::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 90px;
-  pointer-events: none;
-  z-index: 2;
-}
-.hero-strip::before {
-  left: 0;
-  background: linear-gradient(to right, var(--paper), transparent);
-}
-.hero-strip::after {
-  right: 0;
-  background: linear-gradient(to left, var(--paper), transparent);
-}
-
-/* ------------------------------------------------------------
        12. Anti-CLS for the EN ↔ AR font swap
        Reserve consistent line-box heights so the layout doesn't
        jump when Tajawal vs Instrument Serif metrics differ.
@@ -2337,8 +2267,7 @@ html[lang="ar"] body {
   .proj-card::before {
     transition: none;
   }
-  html.is-switching main,
-  html.is-switching .hero-strip {
+  html.is-switching main {
     opacity: 1 !important;
     filter: none !important;
   }
@@ -2364,7 +2293,42 @@ html[lang="ar"] body {
 .btn-ghost:focus-visible,
 .contact-btn:focus-visible,
 .c-copy:focus-visible,
-.back-top:focus-visible {
+.back-top:focus-visible,
+.proj-link-btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------
+       18. Project links — GitHub / Live / Private badges per card
+       ------------------------------------------------------------ */
+.proj-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.proj-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-family: var(--f-mono);
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  transition:
+    color 0.2s var(--ease-premium),
+    border-color 0.2s var(--ease-premium),
+    background 0.2s var(--ease-premium);
+}
+.proj-link-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.proj-link-btn .bi {
+  font-size: 13px;
 }

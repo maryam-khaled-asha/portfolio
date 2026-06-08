@@ -8,7 +8,7 @@ const I18N = {
     "nav.experience": "Experience",
     "nav.projects": "Projects",
     "nav.contact": "Contact",
-    "nav.cta": "Let's Ship",
+    "nav.cta": "Let's Build",
     "lang.switch": "العربية",
 
     "hero.name": "Maryam<em> Asha</em>",
@@ -36,7 +36,7 @@ const I18N = {
     "about.lead":
       "I build production systems where <em>the easy paths don't scale</em> — and hold the line on performance, security, and observability.",
     "about.p1":
-      "Backend-leaning developer based in Aleppo. 3+ years shipping Laravel APIs and Vue.js frontends — multi-tenant systems, real-time pipelines, schema design, RBAC, and caching.",
+      "Backend-leaning developer based in Aleppo. 3+ years building Laravel APIs and Vue.js frontends — multi-tenant systems, real-time pipelines, schema design, RBAC, and caching.",
     "about.p2":
       "Background in data science — computer vision, NLP, embedding models — before moving to full-stack. Vector databases and AI features are familiar territory; reached for only when they earn their place.",
     "about.stat1.n": "<em>3+</em>",
@@ -81,7 +81,7 @@ const I18N = {
     "skills.chip.agile": "Agile / Scrum",
 
     "exp.num": "03 / Experience",
-    "exp.title": "Where I've <em>shipped</em>.",
+    "exp.title": "Where I've <em>delivered</em>.",
 
     "exp1.tag": "2023 — Present",
     "exp1.role": "Full Stack Developer",
@@ -118,7 +118,7 @@ const I18N = {
     "exp3.body":
       "Co-founded Wasla. Led MVP architecture, technical execution, and market validation in parallel.",
     "exp3.li1":
-      "Owned product, infrastructure, and stack decisions; shipped MVP in Laravel + Vue.js.",
+      "Owned product, infrastructure, and stack decisions; launched the MVP in Laravel + Vue.js.",
     "exp3.li2":
       "Iterative validation — measured willingness to pay, not just interest.",
     "exp3.li3":
@@ -172,7 +172,7 @@ const I18N = {
     "chip.slackEmail": "Telegram · Email",
 
     "contact.num": "05 / Contact",
-    "contact.title": "Let's <em>ship</em> something.",
+    "contact.title": "Let's <em>create</em> something.",
     "contact.lead":
       "Available for <em>full-time and contract</em> work — Laravel/Vue, backend-heavy, real-time, or AI-augmented systems.",
     "contact.email": "Email",
@@ -185,229 +185,192 @@ const I18N = {
     "footer.back": "↑ Back to top",
 
     "title.tab": "Maryam Asha — Full Stack Developer (Laravel · Vue.js)",
-
-    strip: [
-      "Laravel",
-      "Laravel Octane",
-      "Vue.js",
-      "PHP",
-      "MySQL",
-      "Redis",
-      "Laravel Reverb",
-      "RESTful APIs",
-      "RBAC",
-      "Tailwind",
-      "Vuetify",
-      "n8n Automation",
-      "Semantic Search",
-      "Qdrant",
-      "Telegram Bot API",
-      "Apache JMeter",
-    ],
   },
 
   ar: {
-    "nav.about": "نبذة",
-    "nav.skills": "المهارات",
-    "nav.experience": "الخبرة",
-    "nav.projects": "المشاريع",
-    "nav.contact": "التواصل",
-    "nav.cta": "لنبدأ",
+    "nav.about": "عني",
+    "nav.skills": "أدواتي",
+    "nav.experience": "مساري",
+    "nav.projects": "أعمالي",
+    "nav.contact": "تواصل",
+    "nav.cta": "نبني معاً",
     "lang.switch": "English",
 
-    "hero.name": "مريم<em> عشا</em>",
+    "hero.name": "مريم<br/>عشا",
     "hero.role":
-      'مهندسة Full Stack. أنظمة خلفيّة كثيفة مبنيّة للتوسّع — بـ <span class="stack">Laravel</span> و<span class="stack">Vue.js</span> — حيث الأداء والمعمارية شرطٌ لا رفاهية.',
+      'مهندسة Full Stack. أنظمة ثقيلة الـ Backend مبنية لتتوسّع — بـ <span class="stack">Laravel</span> و<span class="stack">Vue.js</span> — حيث الأداء والمعمارية غير قابلَين للمساومة.',
     "hero.lead":
-      "أكثر من ٣ سنوات في تسليم أنظمة Laravel/Vue إنتاجيّة — APIs متعدّدة المستأجرين، أنابيب لحظيّة، تخزين مؤقّت، وبحث مدعوم بالذكاء الاصطناعي. ملكيّة كاملة من تصميم Schema حتى النشر.",
-    "hero.hireMe": "لنعمل معًا",
-    "hero.viewPortfolio": "استعرض المشاريع",
-    "hero.downloadCv": "تحميل السيرة الذاتية",
-    "hero.card.term": "whoami",
+      "أكثر من ثلاث سنوات في تسليم أنظمة Laravel/Vue إنتاجية — APIs متعددة المستأجرين، خطوط معالجة آنية، استراتيجية تخزين مؤقت، وبحث مدمج بالذكاء الاصطناعي. ملكية كاملة من تصميم المخطط حتى النشر.",
+    "hero.hireMe": "لنعمل معاً",
+    "hero.viewPortfolio": "عرض الأعمال",
+    "hero.downloadCv": "تحميل السيرة",
+    "hero.card.term": "مَن أنا",
     "hero.card.quote":
-      'أُصمّم للتوسّع <em style="color: var(--accent)">قبل وصول الحمل</em> — لا بعده.',
+      'أُصمّم للتوسّع <em style="color: var(--accent)">قبل أن يصل الضغط</em> — لا بعده.',
     "hero.card.role.l": "الدور",
     "hero.card.role.v": "مهندسة Full Stack",
-    "hero.card.focus.l": "التخصّص",
+    "hero.card.focus.l": "تخصصي",
     "hero.card.focus.v": "Laravel · Vue.js",
     "hero.card.exp.l": "الخبرة",
     "hero.card.exp.v": "+٣ سنوات",
-    "hero.card.addons.l": "المجال",
-    "hero.card.addons.v": "لحظي · متعدّد المستأجرين · ذكاء اصطناعي",
+    "hero.card.addons.l": "التخصص",
+    "hero.card.addons.v": "آنيّ · متعدد المستأجرين · معزّز بالذكاء",
 
-    "about.num": "٠١ / نبذة",
-    "about.title": "<em>الخلفية</em>، باختصار.",
+    "about.num": "٠١ / عني",
+    "about.title": "<em>خلفيتي</em>، باختصار.",
     "about.lead":
-      "أبني أنظمة إنتاجية لا تتّسع لها <em>الحلول السهلة</em> — وأحافظ على معايير الأداء والأمان وإمكانية الرصد.",
+      "أبني أنظمة إنتاجية حيث <em>الطرق السهلة لا تتوسّع</em> — وأحافظ على خط الأداء والأمان وقابلية المراقبة.",
     "about.p1":
-      "مطوّرة Full Stack ذات ميل خلفي، مقيمة في حلب. أكثر من ٣ سنوات في تشغيل Laravel وVue.js في الإنتاج — أنظمة متعدّدة المستأجرين، أنابيب لحظيّة، تصميم Schema، صلاحيّات RBAC، واستراتيجيات تخزين مؤقّت.",
+      "مطوّرة ميّالة إلى الـ Backend، مقرّها حلب. أكثر من ثلاث سنوات في بناء APIs بـ Laravel وواجهات Vue.js — أنظمة متعددة المستأجرين، خطوط معالجة آنية، تصميم المخططات، صلاحيات الأدوار، والتخزين المؤقت.",
     "about.p2":
-      "خلفيّة في علم البيانات — رؤية حاسوبيّة، معالجة لغة طبيعيّة، نماذج تضمين — قبل الانتقال للهندسة الشاملة. قواعد البيانات المتجهيّة والميزات الذكيّة أرضٌ مألوفة؛ ألجأ إليها حين تستحقّ مكانها.",
-    "about.stat1.n": "<em>+3</em>",
-    "about.stat1.l": "سنوات في بناء<br/>تطبيقات Full Stack",
-    "about.stat2.n": "<em>30%</em>",
-    "about.stat2.l": "تسريع APIs<br/>بـ Octane وRedis",
-    "about.stat3.n": "2",
-    "about.stat3.l": "شهادات<br/>بكالوريوس · ماجستير",
+      "خلفية في علم البيانات — رؤية الحاسوب، معالجة اللغة الطبيعية، نماذج التضمين — قبل الانتقال إلى Full Stack. قواعد البيانات المتجهية وميزات الذكاء الاصطناعي أرض مألوفة؛ ألجأ إليها فقط حين تستحق مكانها.",
+    "about.stat1.n": "<em>٣+</em>",
+    "about.stat1.l": "سنوات في بناء<br/>تطبيقات متكاملة",
+    "about.stat2.n": "<em>٣٠٪</em>",
+    "about.stat2.l": "APIs أسرع<br/>بـ Octane و Redis",
+    "about.stat3.n": "٢",
+    "about.stat3.l": "درجتان<br/>بكالوريوس · ماجستير",
 
     "edu.label": "— التعليم",
-    "edu1.year": "٢٠٢٥ — حتى الآن",
-    "edu1.deg": "ماجستير إدارة الأعمال",
-    "edu1.inst": "الجامعة الافتراضيّة السوريّة",
+    "edu1.year": "٢٠٢٥ — حالياً",
+    "edu1.deg": "ماجستير، إدارة الأعمال",
+    "edu1.inst": "الجامعة الافتراضية السورية",
     "edu2.year": "٢٠١٨ — ٢٠٢٣",
-    "edu2.deg": "بكالوريوس تقنية المعلومات",
+    "edu2.deg": "بكالوريوس، تقانة المعلومات",
     "edu2.inst": "جامعة حلب",
     "edu3.year": "٢٠٢٢ — ٢٠٢٤",
     "edu3.deg": "علم البيانات · مسار مستقل",
     "edu3.inst":
-      "شبكات CNN، معالجة لغة طبيعيّة، نماذج تضمين، رؤية حاسوبيّة.",
+      "شبكات CNN، معالجة اللغة الطبيعية، نماذج التضمين، رؤية الحاسوب.",
 
-    "skills.num": "٠٢ / المهارات",
-    "skills.title": "الـ <em>Stack</em> الذي أعتمد عليه.",
-    "skills.backend.title": "الواجهة الخلفيّة <em>· أساسيّة</em>",
-    "skills.frontend.title": "الواجهة الأماميّة <em>· أساسيّة</em>",
+    "skills.num": "٠٢ / أدواتي",
+    "skills.title": "الـ <em>أدوات</em> التي أمدّ يدي إليها.",
+    "skills.backend.title": "الـ Backend <em>· الأساس</em>",
+    "skills.frontend.title": "الـ Frontend <em>· الأساس</em>",
     "skills.ai.title": "الذكاء الاصطناعي والبحث <em>· مدمج</em>",
     "skills.ai.caption":
-      "نماذج تضمين، بحث متجهي، وميزات معزّزة بالذكاء الاصطناعي.",
+      "نماذج التضمين، البحث المتجهي، ميزات مدمجة بالذكاء الاصطناعي.",
     "skills.tools.title": "الأدوات <em>وسير العمل</em>",
     "skills.tools.caption":
-      "الأتمتة، إدارة الإصدارات، اختبار الحمل، والمراقبة.",
-    "skills.lvl.expert": "متقدّم جدًا",
-    "skills.lvl.advanced": "متقدّم",
-    "skills.lvl.proficient": "جيّد",
+      "الأتمتة، إدارة الإصدارات، اختبار الحمل، قابلية المراقبة.",
+    "skills.lvl.expert": "محترفة",
+    "skills.lvl.advanced": "متقدمة",
+    "skills.lvl.proficient": "جيدة",
     "skills.row.mysql": "MySQL · تحسين الاستعلامات",
-    "skills.row.redis": "Redis · Octane · تخزين مؤقّت",
-    "skills.row.html": "HTML5 · تصميم متجاوب",
-    "skills.chip.queues": "الطوابير والمهام",
-    "skills.chip.multiTenant": "متعدّد المستأجرين",
+    "skills.row.redis": "Redis · Octane · تخزين مؤقت",
+    "skills.row.html": "HTML5 · CSS متجاوب",
+    "skills.chip.queues": "الطوابير والوظائف",
+    "skills.chip.multiTenant": "Multi-tenant",
     "skills.chip.semantic": "بحث دلالي",
     "skills.chip.n8n": "أتمتة n8n",
-    "skills.chip.agile": "أجايل / سكرَم",
+    "skills.chip.agile": "Agile / Scrum",
 
-    "exp.num": "٠٣ / الخبرة",
-    "exp.title": "أين <em>أطلقتُ</em> أعمالي.",
+    "exp.num": "٠٣ / مساري",
+    "exp.title": "أين <em>أطلقتُ</em>.",
 
-    "exp1.tag": "٢٠٢٣ — حتى الآن",
+    "exp1.tag": "٢٠٢٣ — حالياً",
     "exp1.role": "مطوّرة Full Stack",
     "exp1.location": "حلب",
-    "exp1.company": "مجموعة Automata4",
+    "exp1.company": "Automata4 Group",
     "exp1.companySub": "— Wajab و Katateeb",
     "exp1.body":
-      "مطوّرة رئيسيّة على منصّتَين — Wajab (إدارة الشكاوى الحكوميّة) و Katateeb (نظام إدارة مدرسي). أتولّى البنية الخلفيّة والأداء والبنى اللحظيّة.",
+      "المطوّرة الرئيسية عبر منصتين — Wajab (شكاوى حكومية) و Katateeb (نظام إدارة مدرسي). أملك الـ Backend والأداء والبنية الآنية.",
     "exp1.li1":
-      "Wajab — بنية خلفيّة معياريّة؛ Redis مع Laravel Octane ← تسريع APIs بنسبة ٣٠٪، p95 دون الثانية.",
+      "Wajab — Backend معياري؛ Redis + Laravel Octane ← تسريع APIs بنسبة ٣٠٪، وp95 دون الثانية.",
     "exp1.li2":
-      "اختبار حِمل بـ Apache JMeter عند ٥٠٠ مستخدم متزامن قبل الإطلاق.",
+      "تم التحقق بـ JMeter عند ٥٠٠ مستخدم متزامن قبل الإطلاق.",
     "exp1.li3":
-      "Katateeb — خدمات API للطلاب والمعلّمين والإداريين؛ دردشة وإشعارات لحظيّة على Laravel Reverb.",
+      "Katateeb — خدمات API للطلاب والمعلمين والمدراء؛ دردشة وإشعارات آنية عبر Laravel Reverb.",
 
-    "exp2.tag": "٢٠٢٥ — حتى الآن",
+    "exp2.tag": "٢٠٢٥ — حالياً",
     "exp2.subtag": "مطوّرة Full Stack",
     "exp2.role": "مطوّرة Full Stack",
     "exp2.company": "Comma",
-    "exp2.companySub": "— سوق ZOKA الإلكتروني",
+    "exp2.companySub": "— سوق ZOKA",
     "exp2.body":
-      "أبني ZOKA — سوقًا متعدّد المستأجرين بخمسة أنواع من المستخدمين. أتولّى الخدمات الخلفيّة وبنية لوحات التحكّم.",
+      "أبني ZOKA — سوقاً متعدد المستأجرين عبر خمسة أنواع من الفاعلين. أملك خدمات الـ Backend وبنية لوحات التحكم.",
     "exp2.li1":
-      "تنسيق طلبات متعدّدة المتاجر — تقسيم ← توجيه عبر أقرب مستودع ← إعادة تجميع ← إرسال، مع إشعارات لحظيّة عند كلّ انتقال.",
+      "تنسيق طلبات متعددة المتاجر — تقسيم ← توجيه للمستودعات ← إعادة تجميع ← إرسال، مع بثّ إشعارات لكل حالة.",
     "exp2.li2":
-      "محفظة ثنائيّة العملة (دولار + ليرة) مع إيداع تلقائي للمتاجر عند التسليم.",
+      "محفظة بعملتين (دولار + ليرة سورية) مع إيداع تلقائي للمتجر عند التسليم.",
     "exp2.li3":
-      "تشجير فئات بعمق لا نهائي؛ تسعير توصيل ديناميكي قابل للتعديل من لوحة الإدارة.",
+      "تداخل فئات بعمق لا نهائي؛ شرائح تسعير توصيل قابلة للضبط من لوحة الإدارة.",
 
-    "exp3.tag": "تموز — أيلول ٢٠٢٥",
-    "exp3.subtag": "شريكة مؤسِّسة · قائدة تقنية",
-    "exp3.role": "شريكة مؤسِّسة وقائدة تقنية",
-    "exp3.company": "شركة Wasla",
+    "exp3.tag": "نيسان — أيلول ٢٠٢٥",
+    "exp3.subtag": "شريكة مؤسِّسة · مطوّرة رئيسية",
+    "exp3.role": "شريكة مؤسِّسة · مطوّرة رئيسية",
+    "exp3.company": "Wasla",
+    "exp3.companySub": "",
     "exp3.body":
-      "شاركتُ في تأسيس Wasla. قُدتُ معماريّة الـ MVP والتنفيذ التقني ودورات تحقّق السوق بالتوازي.",
+      "شاركت في تأسيس Wasla. قُدت معمارية الـ MVP والتنفيذ التقني والتحقق من السوق بالتوازي.",
     "exp3.li1":
-      "قرارات المنتج والبنية التحتية والتقنيات؛ أطلقتُ الـ MVP بـ Laravel و Vue.js.",
+      "امتلكت قرارات المنتج والبنية التحتية والتقنيات؛ أطلقت الـ MVP بـ Laravel + Vue.js.",
     "exp3.li2":
-      "تحقّق تكراري بالتوازي مع التطوير — قِسْتُ الاستعداد للدفع، لا مجرّد الاهتمام.",
+      "تحقّق تكراري — قِست الاستعداد للدفع، لا مجرد الاهتمام.",
     "exp3.li3":
-      "أنهينا المشروع بصدق حين حسمت البياناتُ القرار. الآن: أتحقّق من الطلب المدفوع قبل كتابة أيّ سطر.",
+      "أوقفته بصدق حين حسمت البيانات الأمر. الآن: أتحقّق من الطلب المدفوع قبل كتابة أي كود.",
 
     "exp4.tag": "٢٠٢٤",
     "exp4.subtag": "عمل حر · بحث ذكي",
-    "exp4.role": "دمج بحث دلالي — عمل حر",
-    "exp4.company": "عميل تجارة إلكترونيّة",
+    "exp4.role": "تكامل بحث ذكي — عمل حر",
+    "exp4.company": "عميل تجارة إلكترونية",
     "exp4.companySub": "— بحث دلالي ثنائي اللغة",
     "exp4.body":
-      "بحث دلالي ثنائي اللغة لكتالوج تجارة إلكترونيّة — استبدلتُ المطابقة المعتمدة على الكلمات المفتاحيّة.",
+      "بحث دلالي ثنائي اللغة لكتالوج تجارة إلكترونية. استبدلت المطابقة بالكلمات المفتاحية التي كانت تُفوّت نتائج عربية/إنجليزية صحيحة.",
     "exp4.li1":
-      "سلسلة بحث متجهيّة بـ multilingual-e5-large-instruct مع Qdrant — العربيّة والإنجليزيّة في فضاء واحد.",
+      "خط بحث متجهي بـ multilingual-e5-large-instruct + Qdrant — العربية والإنجليزية في الفضاء المتجهي نفسه.",
     "exp4.li2":
-      "اخترتُ e5-large-instruct بعد قياس فقدان النماذج الأخفّ لدقّة اللهجة والصرف العربي.",
+      "اخترت e5-large-instruct بعد قياس ضعف النماذج الأخف في لهجات العربية وصرفها.",
     "exp4.li3":
-      "الأخطاء الإملائيّة والمرادفات والاستعلامات عبر اللغات — كلّها تعود بنتائج دلاليّة دقيقة.",
+      "عالجت النقاط العمياء للكلمات المفتاحية — الأخطاء الإملائية والمرادفات والبحث عبر اللغات تُعيد جميعها نتائج ذات صلة.",
 
-    "proj.num": "٠٤ / المشاريع",
+    "proj.num": "٠٤ / أعمالي",
     "proj.title": "أعمال <em>مختارة</em>.",
 
-    "proj1.tag": "— مُميَّز · دمج ذكاء اصطناعي",
+    "proj1.tag": "— مميّز · تكامل ذكاء اصطناعي",
     "proj1.year": "٢٠٢٤",
-    "proj1.title": "محرّك <em>بحث دلالي</em> ثنائي اللغة",
+    "proj1.title": "محرك <em>بحث دلالي</em> ثنائي اللغة",
     "proj1.desc":
-      'بحث الكلمات المفتاحية في كتالوج ثنائي اللغة كان يفوّت تطابقات صحيحة بصمت — "حذاء رياضي" لا تُعيد "sneakers". استبدلتُه بسلسلة بحث متجهي على multilingual-e5-large-instruct + Qdrant، تُضمِّن العربية والإنجليزية في فضاء مشترك واحد. قيّمتُ نماذج أخفّ أولاً؛ فاز e5-large-instruct في الصرف العربي واللهجات. الاسترجاع متعدّد اللغات، التسامح مع المرادفات والأخطاء — كلّها مُعالَجة عند طبقة التضمين.',
+      "كان البحث بالكلمات المفتاحية في كتالوج تجارة إلكترونية ثنائي اللغة يُفوّت نتائج صحيحة بصمت — «حذاء رياضي» يُعيد صفر نتيجة عن «sneakers». استبدلته بخط متجهي على multilingual-e5-large-instruct + Qdrant، يُضمّن العربية والإنجليزية في فضاء مشترك واحد. قيّمت النماذج الأخف أولاً؛ تفوّق e5-large-instruct في صرف العربية ومعالجة اللهجات. الاسترجاع عبر اللغات، وتحمّل المرادفات، ومقاومة الأخطاء الإملائية — كلها محلولة في طبقة التضمين.",
 
     "proj2.tag": "— أتمتة",
-    "proj2.year": "٢٠٢٤ — حتى الآن",
-    "proj2.title": "<em>أتمتة</em> سير العمل الإنتاجي",
+    "proj2.year": "٢٠٢٤ — حالياً",
+    "proj2.title": "أتمتة <em>سير عمل</em> إنتاجية",
     "proj2.desc":
-      "أنابيب كرون ونصوص هشّة كانت تفشل بصمت — لا رؤية، لا إعادات. أعدتُ تصميمها كسلاسل n8n مدفوعة بالأحداث: إشعارات دورة حياة الطلبات تتفرّع للعميل/المتجر/المستودع عند كلّ انتقال، وكشف خرق الـ SLA يُصعّد تلقائيًا لرؤساء الأقسام. طوابير فشل، إعادات تلقائية، وواجهة بدون كود — الفريق التشغيلي يُدير السلاسل دون تدخّل هندسي أو وصول للسيرفر.",
+      "كانت خطوط cron وسكربتات الـ shell الهشّة تفشل بصمت — بلا مراقبة ولا إعادة محاولة. أعدت تصميمها كتدفقات n8n مدفوعة بالأحداث: إشعارات دورة حياة الطلب تُبَثّ إلى العميل والمتجر والمستودع عند كل تغيّر حالة، واكتشاف خرق الـ SLA يُصعّد تلقائياً إلى رؤساء الأقسام. تتضمن طوابير الرسائل الميتة، وإعادة المحاولة التلقائية، وواجهة بلا كود — يدير الفريق التشغيلي التدفقات ويصحّحها دون وصول للخادم أو تدخّل هندسي.",
 
     "proj3.tag": "— Automata4",
     "proj3.label": "إنتاج · حكومي",
-    "proj3.title": "Wajab — منصّة <em>الشكاوى</em>",
+    "proj3.title": "Wajab — منصة <em>الشكاوى</em>",
     "proj3.desc":
-      "منصّة متعدّدة المستأجرين تُوجّه شكاوى المواطنين عبر مستويات حكوميّة — مُصمَّمة لتحمّل الحمل المتزامن من اليوم الأول. ضبطتُ المسارات الساخنة بتخزين Redis مؤقّت ونموذج العامل الدائم في Octane؛ اختُبرت بـ JMeter عند ٥٠٠ مستخدم متزامن قبل الإطلاق. النتيجة: تحسّن ٣٠٪ في زمن الاستجابة، p95 دون الثانية. روبوت Telegram كمدخل مواز — التقديم دون مغادرة القناة المعتادة.",
+      "منصة متعددة المستأجرين توجّه شكاوى المواطنين عبر المستويات الإدارية الحكومية — مصمّمة للحمل المتزامن منذ اليوم الأول. ضبطت المسارات الساخنة بتخزين Redis المؤقت ونموذج العامل الدائم في Octane؛ تم التحقق عند ٥٠٠ مستخدم متزامن تحت JMeter قبل الإطلاق. النتيجة: خفض ٣٠٪ في زمن استجابة الـ API، وp95 دون الثانية على نقاط النهاية الأساسية. أُضيف بوت Telegram كنقطة دخول موازية — يقدّم المواطنون شكاواهم دون مغادرة القناة التي يستخدمونها أصلاً.",
 
     "proj4.tag": "— Comma",
     "proj4.label": "إنتاج · سوق",
-    "proj4.title": "ZOKA — سوق <em>متعدّد المستأجرين</em>",
+    "proj4.title": "ZOKA — سوق <em>متعدد المستأجرين</em>",
     "proj4.desc":
-      'طلب عميل واحد قد يضمّ منتجات من متاجر وعملات وجهات تنفيذ متعدّدة — التعقيد غير مرئيّ للمستخدم النهائي. صمّمتُ سلسلة طلبات بثماني مراحل (تقسيم ← توجيه ← إعادة تجميع ← إرسال ← إيداع) مع إشعارات لحظيّة لخمسة أنواع من المستخدمين عبر Laravel Reverb. محافظ ثنائيّة العملة (USD + SYP) تُودع رصيد المتجر ذريًّا عند التسليم. مبنيّ لتحمّل النموّ التشغيلي دون زيادة متناسبة في التعقيد.',
+      "طلب عميل واحد قد يمتد عبر متاجر وعملات وفاعلي تنفيذ متعددين — والتعقيد خفيّ عن المستخدم النهائي. هندست خط طلب من ٨ مراحل (تقسيم ← توجيه للمستودعات ← إعادة تجميع ← إرسال ← إيداع المحفظة) مع بثّ حالة آني إلى ٥ أنواع من الفاعلين عبر Laravel Reverb. محافظ بعملتين (دولار + ليرة) تُودِع للمتاجر بشكل ذرّي عند التسليم. مبنيّ لتوسّع تشغيلي دون تكلفة تشغيل متناسبة.",
 
-    "chip.payments": "الدفع",
+    "chip.payments": "مدفوعات",
     "chip.product": "منتج",
     "chip.pyEmbed": "e5-large-instruct",
     "chip.vectorDb": "Qdrant",
     "chip.slackEmail": "Telegram · بريد",
 
-    "contact.num": "٠٥ / التواصل",
-    "contact.title": "لنُطلق <em>شيئًا</em> معًا.",
+    "contact.num": "٠٥ / تواصل",
+    "contact.title": "لنصنع <em>شيئاً</em>.",
     "contact.lead":
-      "متاحة لـ <em>الدوام الكامل والعقود</em> — منصّات Laravel/Vue، أنظمة خلفيّة كثيفة، لحظيّة، أو مدعومة بالذكاء الاصطناعي.",
+      "متاحة للعمل <em>بدوام كامل أو بعقود</em> — أنظمة Laravel/Vue، ثقيلة الـ Backend، آنية، أو معزّزة بالذكاء الاصطناعي.",
     "contact.email": "البريد",
     "contact.phone": "الهاتف",
-    "contact.location": "المقر",
+    "contact.location": "موقعي",
     "contact.locationV": "حلب، سوريا · عن بُعد",
-    "contact.btn.email": "راسلني",
+    "contact.btn.email": "راسليني",
 
-    "footer.copy": "© {year} مريم عشا . جميع الحقوق محفوظة",
-    "footer.back": "↑ العودة إلى الأعلى",
+    "footer.copy": "© {year} مريم عشا · جميع الحقوق محفوظة",
+    "footer.back": "للأعلى ↑",
 
     "title.tab": "مريم عشا — مطوّرة Full Stack (Laravel · Vue.js)",
-
-    strip: [
-      "Laravel",
-      "Laravel Octane",
-      "Vue.js",
-      "PHP",
-      "MySQL",
-      "Redis",
-      "Laravel Reverb",
-      "RESTful APIs",
-      "RBAC",
-      "Tailwind",
-      "Vuetify",
-      "أتمتة n8n",
-      "بحث دلالي",
-      "Qdrant",
-      "Telegram Bot API",
-      "Apache JMeter",
-    ],
   },
 };
 
@@ -448,7 +411,6 @@ themeBtn.addEventListener("click", () => {
 const LANG_KEY = "pf.lang";
 const langBtn = document.getElementById("langToggle");
 const langLabel = document.getElementById("langLabel");
-const stripEl = document.getElementById("strip");
 
 /* -----------------------------------------------------------
    Wordmark — robot-typewriter animation
@@ -594,16 +556,10 @@ function applyLang(lang) {
   // 3) document title
   document.title = dict["title.tab"] || document.title;
 
-  // 4) marquee — rebuild with translated tokens
-  if (stripEl && Array.isArray(dict.strip)) {
-    const items = dict.strip.concat(dict.strip); // duplicate for seamless loop
-    stripEl.innerHTML = items.map((t) => `<span>${t}</span>`).join("");
-  }
-
-  // 5) Button label
+  // 4) Button label
   if (langLabel) langLabel.textContent = dict["lang.switch"];
 
-  // 6) Restart wordmark typing animation in the active language
+  // 5) Restart wordmark typing animation in the active language
   startWordmarkTyping(lang);
 }
 
