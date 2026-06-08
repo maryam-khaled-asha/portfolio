@@ -642,44 +642,14 @@ const barIo = new IntersectionObserver(
 document.querySelectorAll(".skill-group").forEach((el) => barIo.observe(el));
 
 /* ==========================================================================
-       6) Download CV  —  force a real file download (never open inline).
-          The PDF ships as a static file; we fetch it into a Blob and save it
-          so the browser downloads rather than previews. Falls back to a plain
-          download link if fetch is unavailable.
+       6) Download CV
+          The PDF is a same-origin static file and the buttons carry both
+          `href` and `download`, so the browser downloads it natively and
+          reliably. We intentionally do NOT intercept with fetch()/Blob:
+          that path could yield an empty (0-byte) file under file:// or in
+          browsers that return an opaque response, and it adds nothing over
+          the native `download` attribute for a same-origin file.
        ========================================================================== */
-function saveBlob(blob, filename) {
-  const objectUrl = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = objectUrl;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
-}
-
-document.querySelectorAll(".js-download-cv").forEach((btn) => {
-  btn.addEventListener("click", async (e) => {
-    e.preventDefault();
-    const filename = btn.getAttribute("download") || "CV.pdf";
-    const url = btn.getAttribute("href");
-
-    // Fetch the file and save as a Blob (works when served over http/https).
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error("fetch failed");
-      saveBlob(await res.blob(), filename);
-    } catch (_) {
-      // Fallback: plain download link.
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    }
-  });
-});
 
 /* ==========================================================================
        7) Copy email to clipboard  —  one-click for recruiters.
