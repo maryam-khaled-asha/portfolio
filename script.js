@@ -391,9 +391,9 @@ function applyTheme(t) {
     t === "dark" ? "Switch to light mode" : "Switch to dark mode",
   );
 }
-let theme =
-  localStorage.getItem(THEME_KEY) ||
-  (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+// Default to dark + English regardless of the OS / browser preference.
+// A returning visitor's explicit toggle is still honoured via localStorage.
+let theme = localStorage.getItem(THEME_KEY) || "dark";
 applyTheme(theme);
 
 themeBtn.addEventListener("click", () => {
@@ -563,9 +563,11 @@ function applyLang(lang) {
   startWordmarkTyping(lang);
 }
 
-let lang = localStorage.getItem(LANG_KEY) || "en";
+// Language toggle disabled — site is locked to English.
+let lang = "en";
 applyLang(lang);
 
+/* --- Language switching temporarily disabled -------------------------
 langBtn.addEventListener("click", () => {
   lang = lang === "ar" ? "en" : "ar";
   localStorage.setItem(LANG_KEY, lang);
@@ -575,6 +577,7 @@ langBtn.addEventListener("click", () => {
     animateVisibleBars();
   });
 });
+--------------------------------------------------------------------- */
 
 /* ==========================================================================
        3) Nav  —  shadow on scroll + scroll-spy
