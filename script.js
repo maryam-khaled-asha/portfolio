@@ -13,10 +13,8 @@ const I18N = {
 
     "hero.name": "Maryam<em> Asha</em>",
     "hero.role":
-      'Full Stack Engineer. Backend-heavy systems built to scale — with <span class="stack">Laravel</span> &amp; <span class="stack">Vue.js</span> — where performance and architecture are non-negotiable.',
-    "hero.lead":
-      "3+ years delivering production Laravel/Vue systems — multi-tenant APIs, real-time pipelines, caching strategy, and AI-integrated search. Full ownership from schema design to deployment.",
-    "hero.hireMe": "Let's Work Together",
+      'Software Engineer with a passion for building <span class="stack">scalable products</span>, leading technical initiatives, and delivering solutions that create measurable business impact.',
+   "hero.hireMe": "Let's Work Together",
     "hero.viewPortfolio": "View Projects",
     "hero.downloadCv": "Download CV",
     "hero.card.term": "whoami",
@@ -61,7 +59,11 @@ const I18N = {
     "skills.num": "02 / Skills",
     "skills.title": "The <em>stack</em> I reach for.",
     "skills.backend.title": "Backend <em>· primary</em>",
+    "skills.backend.caption":
+      "Laravel APIs, query optimization, caching, multi-tenant systems.",
     "skills.frontend.title": "Frontend <em>· primary</em>",
+    "skills.frontend.caption":
+      "Vue SPAs, responsive UIs, state management, modern tooling.",
     "skills.ai.title": "AI &amp; Search <em>· integrated</em>",
     "skills.ai.caption":
       "Embedding models, vector search, AI-integrated features.",
@@ -158,6 +160,7 @@ const I18N = {
     "proj3.title": "Wajab — <em>Complaint</em> Platform",
     "proj3.desc":
       "Multi-tenant platform routing citizen complaints across government administrative levels — designed for concurrent load from day one. Tuned hot paths with Redis caching and Octane's persistent-worker model; validated at 500 concurrent users under JMeter before launch. Result: 30% reduction in API response time, sub-second p95 on core endpoints. Telegram bot added as a parallel entry point — citizens file without leaving the channel they already use.",
+    "proj3.visit": "Visit Wajab",
 
     "proj4.tag": "— Comma",
     "proj4.label": "Production · Marketplace",
@@ -198,9 +201,7 @@ const I18N = {
 
     "hero.name": "مريم<br/>عشا",
     "hero.role":
-      'مهندسة Full Stack. أنظمة ثقيلة الـ Backend مبنية لتتوسّع — بـ <span class="stack">Laravel</span> و<span class="stack">Vue.js</span> — حيث الأداء والمعمارية غير قابلَين للمساومة.',
-    "hero.lead":
-      "أكثر من ثلاث سنوات في تسليم أنظمة Laravel/Vue إنتاجية — APIs متعددة المستأجرين، خطوط معالجة آنية، استراتيجية تخزين مؤقت، وبحث مدمج بالذكاء الاصطناعي. ملكية كاملة من تصميم المخطط حتى النشر.",
+      'مهندسة برمجيات شغوفة ببناء <span class="stack">منتجات قابلة للتوسّع</span>، وقيادة المبادرات التقنية، وتقديم حلول تُحدث أثراً ملموساً في الأعمال.',
     "hero.hireMe": "لنعمل معاً",
     "hero.viewPortfolio": "عرض الأعمال",
     "hero.downloadCv": "تحميل السيرة",
@@ -246,7 +247,11 @@ const I18N = {
     "skills.num": "٠٢ / أدواتي",
     "skills.title": "الـ <em>أدوات</em> التي أمدّ يدي إليها.",
     "skills.backend.title": "الـ Backend <em>· الأساس</em>",
+    "skills.backend.caption":
+      "واجهات Laravel، تحسين الاستعلامات، التخزين المؤقت، الأنظمة متعددة المستأجرين.",
     "skills.frontend.title": "الـ Frontend <em>· الأساس</em>",
+    "skills.frontend.caption":
+      "تطبيقات Vue أحادية الصفحة، واجهات متجاوبة، إدارة الحالة، أدوات حديثة.",
     "skills.ai.title": "الذكاء الاصطناعي والبحث <em>· مدمج</em>",
     "skills.ai.caption":
       "نماذج التضمين، البحث المتجهي، ميزات مدمجة بالذكاء الاصطناعي.",
@@ -344,6 +349,7 @@ const I18N = {
     "proj3.title": "Wajab — منصة <em>الشكاوى</em>",
     "proj3.desc":
       "منصة متعددة المستأجرين توجّه شكاوى المواطنين عبر المستويات الإدارية الحكومية — مصمّمة للحمل المتزامن منذ اليوم الأول. ضبطت المسارات الساخنة بتخزين Redis المؤقت ونموذج العامل الدائم في Octane؛ تم التحقق عند ٥٠٠ مستخدم متزامن تحت JMeter قبل الإطلاق. النتيجة: خفض ٣٠٪ في زمن استجابة الـ API، وp95 دون الثانية على نقاط النهاية الأساسية. أُضيف بوت Telegram كنقطة دخول موازية — يقدّم المواطنون شكاواهم دون مغادرة القناة التي يستخدمونها أصلاً.",
+    "proj3.visit": "زيارة وجب",
 
     "proj4.tag": "— Comma",
     "proj4.label": "إنتاج · سوق",

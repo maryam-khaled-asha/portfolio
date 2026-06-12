@@ -790,23 +790,29 @@ a:hover {
   letter-spacing: -0.01em;
   color: var(--ink);
   margin-bottom: 28px;
-  max-width: 36ch;
 }
 .hero-role .stack {
   color: var(--accent);
   font-weight: 600;
 }
-.hero-lead {
-  max-width: 52ch;
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: var(--ink-2);
-  margin-bottom: 36px;
-}
+
 .hero-cta {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+/* Centered hero (card removed) */
+.hero-centered {
+  text-align: center;
+}
+.hero-centered .hero-lead {
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-centered .hero-cta {
+  justify-content: center;
 }
 .btn-ink,
 .btn-ghost {
@@ -1251,6 +1257,20 @@ section + section {
   transition:
     border-color 0.2s,
     transform 0.2s;
+}
+
+/* Project visual showing a logo image instead of the decorative SVG */
+.proj-visual--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.proj-visual--logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 28px;
 }
 .tl-card:hover {
   border-color: var(--ink);
