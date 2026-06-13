@@ -2352,3 +2352,65 @@ html[lang="ar"] body {
 .proj-link-btn .bi {
   font-size: 13px;
 }
+
+/* ==========================================================================
+   LEADERSHIP REPOSITIONING — hero subline + ethos band
+   ========================================================================== */
+.hero-sub {
+  font-family: var(--f-sans);
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  font-weight: 400;
+  color: var(--muted);
+  max-width: 640px;
+  margin: -14px auto 30px;
+}
+html[lang="ar"] .hero-sub {
+  font-family: var(--f-arabic);
+}
+
+.ethos-band {
+  padding: 90px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(60% 120% at 50% 0%, color-mix(in srgb, var(--accent) 6%, transparent), transparent),
+    var(--paper);
+}
+.ethos-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ethos-inner .section-num {
+  display: block;
+  margin-bottom: 22px;
+}
+.ethos-quote {
+  font-family: var(--f-serif);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.45;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+.ethos-quote em {
+  font-style: italic;
+  color: var(--accent);
+}
+.ethos-proof {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+html[lang="ar"] .ethos-quote {
+  font-family: var(--f-arabic);
+  line-height: 1.7;
+}
+html[lang="ar"] .ethos-proof {
+  letter-spacing: 0;
+  text-transform: none;
+}
+@media (max-width: 768px) {
+  .ethos-band { padding: 60px 0; }
+}
