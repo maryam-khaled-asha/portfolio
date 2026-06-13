@@ -14,6 +14,8 @@ const I18N = {
     "hero.name": "Maryam<em> Asha</em>",
     "hero.role":
       'Software Engineer with a passion for building <span class="stack">scalable products</span>, leading technical initiatives, and delivering solutions that create measurable business impact.',
+    "hero.sub":
+      "Building systems, improving processes, and helping teams turn complex requirements into products that scale.",
    "hero.hireMe": "Let's Work Together",
     "hero.viewPortfolio": "View Projects",
     "hero.downloadCv": "Download CV",
@@ -37,6 +39,8 @@ const I18N = {
       "Backend-leaning developer based in Aleppo. 3+ years building Laravel APIs and Vue.js frontends — multi-tenant systems, real-time pipelines, schema design, RBAC, and caching.",
     "about.p2":
       "Background in data science — computer vision, NLP, embedding models — before moving to full-stack. Vector databases and AI features are familiar territory; reached for only when they earn their place.",
+    "about.p3":
+      "Beyond engineering: co-founded a startup and currently pursuing an MBA. I care about how products are shaped, how teams align, and how technical decisions translate into business outcomes.",
     "about.stat1.n": "<em>3+</em>",
     "about.stat1.l": "Years building<br/>full stack apps",
     "about.stat2.n": "<em>30%</em>",
@@ -47,7 +51,7 @@ const I18N = {
     "edu.label": "— Education",
     "edu1.year": "2025 — Present",
     "edu1.deg": "MSc, Business Administration",
-    "edu1.inst": "Syrian Virtual University",
+    "edu1.inst": "Syrian Virtual University · Focus: Leadership, Strategy &amp; Organizational Development",
     "edu2.year": "2018 — 2023",
     "edu2.deg": "BSc, Information Technology",
     "edu2.inst": "Aleppo University",
@@ -81,6 +85,16 @@ const I18N = {
     "skills.chip.semantic": "Semantic Search",
     "skills.chip.n8n": "n8n Automation",
     "skills.chip.agile": "Agile / Scrum",
+    "skills.lead.title": "Leadership <em>&amp; delivery</em>",
+    "skills.lead.caption":
+      "The part of the job that isn't code — practiced in production, not in theory.",
+    "skills.chip.techLead": "Technical Leadership",
+    "skills.chip.reqAnalysis": "Requirements Analysis",
+    "skills.chip.stakeholder": "Stakeholder Communication",
+    "skills.chip.productVal": "Product Validation",
+    "skills.chip.archDecisions": "Architecture Decisions",
+    "skills.chip.mentoring": "Code Review &amp; Mentoring",
+    "skills.chip.agileDelivery": "Agile Delivery",
 
     "exp.num": "03 / Experience",
     "exp.title": "Where I've <em>delivered</em>.",
@@ -98,6 +112,8 @@ const I18N = {
       "JMeter-validated at 500 concurrent users before launch.",
     "exp1.li3":
       "Katateeb — API services for students/teachers/admins; real-time chat & notifications on Laravel Reverb.",
+    "exp1.li4":
+      "Translate stakeholder & operational requirements into platform capabilities — own the technical conversation with non-technical teams.",
 
     "exp2.tag": "2025 — Present",
     "exp2.subtag": "Full Stack Developer",
@@ -112,19 +128,28 @@ const I18N = {
       "Dual-currency wallet (USD + SYP) with automatic store crediting on delivery.",
     "exp2.li3":
       "Infinite-depth category nesting; admin-configurable delivery pricing tiers.",
+    "exp2.li4":
+      "Work directly with product & business requirements to design multi-actor marketplace workflows.",
 
     "exp3.tag": "Apr — Sep 2025",
     "exp3.subtag": "Co-Founder · Lead Developer",
     "exp3.role": "Co-Founder &amp; Lead Developer",
     "exp3.company": "Wasla Startup",
+    "exp3.companySub": "",
     "exp3.body":
-      "Co-founded Wasla. Led MVP architecture, technical execution, and market validation in parallel.",
+      "Co-founded and led the development of Wasla — an early-stage startup connecting entrepreneurs with investors. Responsible for product validation, MVP architecture, technical execution, and customer feedback loops.",
     "exp3.li1":
-      "Owned product, infrastructure, and stack decisions; launched the MVP in Laravel + Vue.js.",
+      "Shaped the product: entrepreneurs pitch projects professionally, investors browse and connect, and a network of expert advisors supports both sides.",
     "exp3.li2":
-      "Iterative validation — measured willingness to pay, not just interest.",
+      "Ran product validation and customer feedback loops directly — measured willingness to pay, not interest.",
     "exp3.li3":
-      "Wound down honestly when data made the call. Now: validate paid demand before writing code.",
+      "Owned MVP architecture and technical execution end to end.",
+    "exp3.li4":
+      "Key lesson, applied ever since: successful products are built on validated demand, not assumptions.",
+    "chip.strategy": "Product Strategy",
+    "chip.validation": "Market Validation",
+    "chip.mvp": "MVP Delivery",
+    "chip.feedback": "Customer Feedback",
 
     "exp4.tag": "2024",
     "exp4.subtag": "Freelance · AI Search",
@@ -143,7 +168,15 @@ const I18N = {
     "proj.num": "04 / Projects",
     "proj.title": "Selected <em>work</em>.",
 
-    "proj1.tag": "— Featured · AI integration",
+    "proj0.tag": "— Featured · Co-Founder &amp; Lead Developer",
+    "proj0.year": "2025",
+    "proj0.title": "Wasla — <em>Startup</em>, founded &amp; led",
+    "proj0.desc":
+      "Wasla is a platform connecting ambitious entrepreneurs with interested investors — founders pitch their projects professionally, investors browse ideas that match their interests and reach out directly, and a network of expert advisors helps both sides make informed decisions. Co-founded it and led development end to end: product scoping, MVP delivery, and customer feedback loops. When the data made the call, wound it down honestly — and kept the lesson. Few portfolios show the full founder's loop: build, measure, decide.",
+    "proj0.status": "Wound down · Validated honestly",
+    "chip.leadership": "Leadership",
+
+    "proj1.tag": "— AI integration · Freelance",
     "proj1.year": "2024",
     "proj1.title": "Bilingual <em>Semantic Search</em> Engine",
     "proj1.desc":
@@ -174,10 +207,16 @@ const I18N = {
     "chip.vectorDb": "Qdrant",
     "chip.slackEmail": "Telegram · Email",
 
+    "ethos.num": "— What I'm building toward",
+    "ethos.quote":
+      "I work at the intersection of <em>engineering, leadership, and business strategy</em>. The goal isn't only to build systems that scale — it's to help build the <em>products, teams, and decisions</em> that scale with them.",
+    "ethos.proof":
+      "Startup co-founder · Lead developer on production platforms · MBA in progress",
+
     "contact.num": "05 / Contact",
     "contact.title": "Let's <em>create</em> something.",
     "contact.lead":
-      "Available for <em>full-time and contract</em> work — Laravel/Vue, backend-heavy, real-time, or AI-augmented systems.",
+      "Open to <em>senior engineering and technical leadership</em> roles — full-time, contract, and collaborations where engineering meets product.",
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.location": "Based in",
@@ -187,7 +226,7 @@ const I18N = {
     "footer.copy": "© {year} Maryam Asha ·  All rights reserved",
     "footer.back": "↑ Back to top",
 
-    "title.tab": "Maryam Asha — Full Stack Developer (Laravel · Vue.js)",
+    "title.tab": "Maryam Asha — Software Engineer & Technical Leader (Laravel · Vue.js)",
   },
 
   ar: {
@@ -202,6 +241,8 @@ const I18N = {
     "hero.name": "مريم<br/>عشا",
     "hero.role":
       'مهندسة برمجيات شغوفة ببناء <span class="stack">منتجات قابلة للتوسّع</span>، وقيادة المبادرات التقنية، وتقديم حلول تُحدث أثراً ملموساً في الأعمال.',
+    "hero.sub":
+      "أبني الأنظمة، وأحسّن العمليات، وأساعد الفرق على تحويل المتطلبات المعقّدة إلى منتجات قابلة للتوسّع.",
     "hero.hireMe": "لنعمل معاً",
     "hero.viewPortfolio": "عرض الأعمال",
     "hero.downloadCv": "تحميل السيرة",
@@ -225,6 +266,8 @@ const I18N = {
       "مطوّرة ميّالة إلى الـ Backend، مقرّها حلب. أكثر من ثلاث سنوات في بناء APIs بـ Laravel وواجهات Vue.js — أنظمة متعددة المستأجرين، خطوط معالجة آنية، تصميم المخططات، صلاحيات الأدوار، والتخزين المؤقت.",
     "about.p2":
       "خلفية في علم البيانات — رؤية الحاسوب، معالجة اللغة الطبيعية، نماذج التضمين — قبل الانتقال إلى Full Stack. قواعد البيانات المتجهية وميزات الذكاء الاصطناعي أرض مألوفة؛ ألجأ إليها فقط حين تستحق مكانها.",
+    "about.p3":
+      "وراء الهندسة: شاركت في تأسيس شركة ناشئة وأتابع حالياً ماجستير إدارة الأعمال. يهمّني كيف تتشكّل المنتجات، وكيف تصطفّ الفرق، وكيف تترجم القرارات التقنية إلى نتائج أعمال.",
     "about.stat1.n": "<em>٣+</em>",
     "about.stat1.l": "سنوات في بناء<br/>تطبيقات متكاملة",
     "about.stat2.n": "<em>٣٠٪</em>",
@@ -235,7 +278,7 @@ const I18N = {
     "edu.label": "— التعليم",
     "edu1.year": "٢٠٢٥ — حالياً",
     "edu1.deg": "ماجستير، إدارة الأعمال",
-    "edu1.inst": "الجامعة الافتراضية السورية",
+    "edu1.inst": "الجامعة الافتراضية السورية · التركيز: القيادة والاستراتيجية والتطوير المؤسسي",
     "edu2.year": "٢٠١٨ — ٢٠٢٣",
     "edu2.deg": "بكالوريوس، تقانة المعلومات",
     "edu2.inst": "جامعة حلب",
@@ -269,6 +312,16 @@ const I18N = {
     "skills.chip.semantic": "بحث دلالي",
     "skills.chip.n8n": "أتمتة n8n",
     "skills.chip.agile": "Agile / Scrum",
+    "skills.lead.title": "القيادة <em>والتسليم</em>",
+    "skills.lead.caption":
+      "الجزء من العمل الذي ليس كوداً — مُمارَس في الإنتاج، لا في النظريات.",
+    "skills.chip.techLead": "قيادة تقنية",
+    "skills.chip.reqAnalysis": "تحليل المتطلبات",
+    "skills.chip.stakeholder": "التواصل مع أصحاب المصلحة",
+    "skills.chip.productVal": "التحقق من المنتج",
+    "skills.chip.archDecisions": "قرارات المعمارية",
+    "skills.chip.mentoring": "مراجعة الكود والتوجيه",
+    "skills.chip.agileDelivery": "تسليم Agile",
 
     "exp.num": "٠٣ / مساري",
     "exp.title": "أين <em>أطلقتُ</em>.",
@@ -286,6 +339,8 @@ const I18N = {
       "تم التحقق بـ JMeter عند ٥٠٠ مستخدم متزامن قبل الإطلاق.",
     "exp1.li3":
       "Katateeb — خدمات API للطلاب والمعلمين والمدراء؛ دردشة وإشعارات آنية عبر Laravel Reverb.",
+    "exp1.li4":
+      "أترجم متطلبات أصحاب المصلحة والتشغيل إلى قدرات في المنصة — وأملك الحوار التقني مع الفرق غير التقنية.",
 
     "exp2.tag": "٢٠٢٥ — حالياً",
     "exp2.subtag": "مطوّرة Full Stack",
@@ -300,6 +355,8 @@ const I18N = {
       "محفظة بعملتين (دولار + ليرة سورية) مع إيداع تلقائي للمتجر عند التسليم.",
     "exp2.li3":
       "تداخل فئات بعمق لا نهائي؛ شرائح تسعير توصيل قابلة للضبط من لوحة الإدارة.",
+    "exp2.li4":
+      "أعمل مباشرة مع متطلبات المنتج والأعمال لتصميم تدفقات سوق متعددة الفاعلين.",
 
     "exp3.tag": "نيسان — أيلول ٢٠٢٥",
     "exp3.subtag": "شريكة مؤسِّسة · مطوّرة رئيسية",
@@ -307,13 +364,19 @@ const I18N = {
     "exp3.company": "Wasla",
     "exp3.companySub": "",
     "exp3.body":
-      "شاركت في تأسيس Wasla. قُدت معمارية الـ MVP والتنفيذ التقني والتحقق من السوق بالتوازي.",
+      "شاركت في تأسيس وصلة وقُدت تطويرها — شركة ناشئة في مراحلها المبكرة تربط روّاد الأعمال بالمستثمرين. مسؤولة عن التحقق من المنتج، ومعمارية الـ MVP، والتنفيذ التقني، وحلقات ملاحظات العملاء.",
     "exp3.li1":
-      "امتلكت قرارات المنتج والبنية التحتية والتقنيات؛ أطلقت الـ MVP بـ Laravel + Vue.js.",
+      "صُغت المنتج: روّاد أعمال يعرضون مشاريعهم باحترافية، ومستثمرون يستعرضون الأفكار ويتواصلون مباشرة، وشبكة مستشارين خبراء تدعم الطرفين.",
     "exp3.li2":
-      "تحقّق تكراري — قِست الاستعداد للدفع، لا مجرد الاهتمام.",
+      "أدرت التحقق من المنتج وحلقات ملاحظات العملاء مباشرة — قِست الاستعداد للدفع لا مجرد الاهتمام.",
     "exp3.li3":
-      "أوقفته بصدق حين حسمت البيانات الأمر. الآن: أتحقّق من الطلب المدفوع قبل كتابة أي كود.",
+      "امتلكت معمارية الـ MVP والتنفيذ التقني من البداية إلى النهاية.",
+    "exp3.li4":
+      "الدرس الأهم، وطُبّق منذ ذلك الحين: المنتجات الناجحة تُبنى على طلب متحقَّق منه، لا على افتراضات.",
+    "chip.strategy": "استراتيجية منتج",
+    "chip.validation": "تحقق من السوق",
+    "chip.mvp": "تسليم MVP",
+    "chip.feedback": "ملاحظات العملاء",
 
     "exp4.tag": "٢٠٢٤",
     "exp4.subtag": "عمل حر · بحث ذكي",
@@ -332,7 +395,15 @@ const I18N = {
     "proj.num": "٠٤ / أعمالي",
     "proj.title": "أعمال <em>مختارة</em>.",
 
-    "proj1.tag": "— مميّز · تكامل ذكاء اصطناعي",
+    "proj0.tag": "— مميّز · شريكة مؤسِّسة ومطوّرة رئيسية",
+    "proj0.year": "٢٠٢٥",
+    "proj0.title": "Wasla — شركة ناشئة، <em>أسّستها وقُدتها</em>",
+    "proj0.desc":
+      "وصلة منصة تربط روّاد الأعمال الطموحين بالمستثمرين المهتمين — يعرض المؤسسون مشاريعهم بطريقة احترافية، ويستعرض المستثمرون الأفكار التي تهمّهم ويباشرون التواصل مع أصحابها، وشبكة من المستشارين الخبراء تساعد الطرفين على اتخاذ قرارات مدروسة. شاركت في تأسيسها وقُدت تطويرها من البداية إلى النهاية: نطاق المنتج، وتسليم الـ MVP، وحلقات ملاحظات العملاء. وحين حسمت البيانات الأمر، أوقفتها بصدق — واحتفظت بالدرس. قلّة من الملفات المهنية تُظهر حلقة المؤسِّس كاملة: بناء، قياس، قرار.",
+    "proj0.status": "أُوقفت · تحقّق صادق",
+    "chip.leadership": "قيادة",
+
+    "proj1.tag": "— تكامل ذكاء اصطناعي · عمل حر",
     "proj1.year": "٢٠٢٤",
     "proj1.title": "محرك <em>بحث دلالي</em> ثنائي اللغة",
     "proj1.desc":
@@ -363,10 +434,16 @@ const I18N = {
     "chip.vectorDb": "Qdrant",
     "chip.slackEmail": "Telegram · بريد",
 
+    "ethos.num": "— ما أبني نحوه",
+    "ethos.quote":
+      "أعمل عند تقاطع <em>الهندسة والقيادة واستراتيجية الأعمال</em>. الهدف ليس فقط بناء أنظمة تتوسّع — بل المساعدة في بناء <em>المنتجات والفرق والقرارات</em> التي تتوسّع معها.",
+    "ethos.proof":
+      "شريكة مؤسِّسة لشركة ناشئة · مطوّرة رئيسية على منصات إنتاجية · ماجستير إدارة أعمال قيد الدراسة",
+
     "contact.num": "٠٥ / تواصل",
     "contact.title": "لنصنع <em>شيئاً</em>.",
     "contact.lead":
-      "متاحة للعمل <em>بدوام كامل أو بعقود</em> — أنظمة Laravel/Vue، ثقيلة الـ Backend، آنية، أو معزّزة بالذكاء الاصطناعي.",
+      "متاحة لأدوار <em>الهندسة المتقدمة والقيادة التقنية</em> — بدوام كامل أو بعقود، وللتعاون حيث تلتقي الهندسة بالمنتج.",
     "contact.email": "البريد",
     "contact.phone": "الهاتف",
     "contact.location": "موقعي",
@@ -376,7 +453,7 @@ const I18N = {
     "footer.copy": "© {year} مريم عشا · جميع الحقوق محفوظة",
     "footer.back": "للأعلى ↑",
 
-    "title.tab": "مريم عشا — مطوّرة Full Stack (Laravel · Vue.js)",
+    "title.tab": "مريم عشا — مهندسة برمجيات وقائدة تقنية (Laravel · Vue.js)",
   },
 };
 
