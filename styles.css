@@ -749,7 +749,7 @@ a:hover {
        HERO
        ============================================================ */
 .hero {
-  padding: 40px 0 110px;
+  padding: 56px 0 64px;
   border-bottom: 1px solid var(--line);
   position: relative;
 }
@@ -777,11 +777,22 @@ a:hover {
   font-size: clamp(3.4rem, 8.2vw, 8rem);
   line-height: 0.95;
   letter-spacing: -0.035em;
-  margin: 0 0 0.35em;
+  margin: 0 0 0.18em;
 }
 .hero-title em {
   font-style: italic;
   color: var(--accent);
+}
+.hero-subrole {
+  font-family: var(--f-sans);
+  font-size: clamp(1.35rem, 2.8vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--accent);
+  margin: 0 0 22px;
+}
+html[lang="ar"] .hero-subrole {
+  font-family: var(--f-arabic);
 }
 .hero-role {
   font-family: var(--f-sans);
@@ -1318,6 +1329,18 @@ section + section {
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
+}
+.tl-subhead {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 18px 0 4px;
+}
+html[lang="ar"] .tl-subhead {
+  font-family: var(--f-arabic);
+  letter-spacing: 0;
 }
 .tl-body li {
   position: relative;

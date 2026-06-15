@@ -12,10 +12,11 @@ const I18N = {
     "lang.switch": "العربية",
 
     "hero.name": "Maryam<em> Asha</em>",
+    "hero.subrole": "Software Engineer",
     "hero.role":
       'Software Engineer with a passion for building <span class="stack">scalable products</span>, leading technical initiatives, and delivering solutions that create measurable business impact.',
     "hero.sub":
-      "Building systems, improving processes, and helping teams turn complex requirements into products that scale.",
+      "Interested in the intersection of technology, product strategy, and business growth.",
    "hero.hireMe": "Let's Work Together",
     "hero.viewPortfolio": "View Projects",
     "hero.downloadCv": "Download CV",
@@ -36,11 +37,11 @@ const I18N = {
     "about.lead":
       "I build production systems where <em>the easy paths don't scale</em> — and hold the line on performance, security, and observability.",
     "about.p1":
-      "Backend-leaning developer based in Aleppo. 3+ years building Laravel APIs and Vue.js frontends — multi-tenant systems, real-time pipelines, schema design, RBAC, and caching.",
+      "Software engineer based in Aleppo with 3+ years of experience building scalable web applications, multi-tenant platforms, and real-time systems. My work spans backend architecture, system design, and full-stack product development using Laravel and Vue.js.",
     "about.p2":
-      "Background in data science — computer vision, NLP, embedding models — before moving to full-stack. Vector databases and AI features are familiar territory; reached for only when they earn their place.",
+      "My background in data science includes NLP, computer vision, semantic search, and embedding-based systems. Today, I approach AI as a practical tool — applied when it solves real problems, improves user experience, and creates measurable value.",
     "about.p3":
-      "Beyond engineering: co-founded a startup and currently pursuing an MBA. I care about how products are shaped, how teams align, and how technical decisions translate into business outcomes.",
+      "Beyond engineering, I co-founded a startup and am currently pursuing an MBA. I'm particularly interested in the intersection of technology, product strategy, leadership, and business growth — exploring how strong teams, thoughtful products, and sound technical decisions come together to create lasting impact.",
     "about.stat1.n": "<em>3+</em>",
     "about.stat1.l": "Years building<br/>full stack apps",
     "about.stat2.n": "<em>30%</em>",
@@ -51,7 +52,7 @@ const I18N = {
     "edu.label": "— Education",
     "edu1.year": "2025 — Present",
     "edu1.deg": "MSc, Business Administration",
-    "edu1.inst": "Syrian Virtual University · Focus: Leadership, Strategy &amp; Organizational Development",
+    "edu1.inst": "Syrian Virtual University ",
     "edu2.year": "2018 — 2023",
     "edu2.deg": "BSc, Information Technology",
     "edu2.inst": "Aleppo University",
@@ -63,17 +64,9 @@ const I18N = {
     "skills.num": "02 / Skills",
     "skills.title": "The <em>stack</em> I reach for.",
     "skills.backend.title": "Backend <em>· primary</em>",
-    "skills.backend.caption":
-      "Laravel APIs, query optimization, caching, multi-tenant systems.",
     "skills.frontend.title": "Frontend <em>· primary</em>",
-    "skills.frontend.caption":
-      "Vue SPAs, responsive UIs, state management, modern tooling.",
     "skills.ai.title": "AI &amp; Search <em>· integrated</em>",
-    "skills.ai.caption":
-      "Embedding models, vector search, AI-integrated features.",
     "skills.tools.title": "Tools <em>&amp; workflow</em>",
-    "skills.tools.caption":
-      "Automation, version control, load testing, observability.",
     "skills.lvl.expert": "Expert",
     "skills.lvl.advanced": "Advanced",
     "skills.lvl.proficient": "Proficient",
@@ -85,58 +78,46 @@ const I18N = {
     "skills.chip.semantic": "Semantic Search",
     "skills.chip.n8n": "n8n Automation",
     "skills.chip.agile": "Agile / Scrum",
-    "skills.lead.title": "Leadership <em>&amp; delivery</em>",
-    "skills.lead.caption":
-      "The part of the job that isn't code — practiced in production, not in theory.",
-    "skills.chip.techLead": "Technical Leadership",
-    "skills.chip.reqAnalysis": "Requirements Analysis",
-    "skills.chip.stakeholder": "Stakeholder Communication",
-    "skills.chip.productVal": "Product Validation",
-    "skills.chip.archDecisions": "Architecture Decisions",
-    "skills.chip.mentoring": "Code Review &amp; Mentoring",
-    "skills.chip.agileDelivery": "Agile Delivery",
 
     "exp.num": "03 / Experience",
     "exp.title": "Where I've <em>delivered</em>.",
 
     "exp1.tag": "2023 — Present",
     "exp1.role": "Full Stack Developer",
-    "exp1.location": "Aleppo",
     "exp1.company": "Automata4 Group",
-    "exp1.companySub": "— Wajab &amp; Katateeb",
     "exp1.body":
-      "Lead developer across two platforms — Wajab (government complaints) and Katateeb (school ERP). Own backend, performance, and real-time infrastructure.",
+      "Working across multiple products and domains, building scalable systems that support operational efficiency, user engagement, and business objectives.",
+    "exp1.selected": "Selected Work",
     "exp1.li1":
-      "Wajab — modular backend; Redis + Laravel Octane → 30% API speedup, sub-second p95.",
+      "Wajab — Optimized backend performance using Redis and Laravel Octane, achieving a 30% API speed improvement.",
     "exp1.li2":
-      "JMeter-validated at 500 concurrent users before launch.",
+      "Katateeb — Built real-time communication and notification infrastructure for students, teachers, and administrators.",
     "exp1.li3":
-      "Katateeb — API services for students/teachers/admins; real-time chat & notifications on Laravel Reverb.",
+      "Contributed to multiple internal and client-facing platforms across government, education, and operational domains.",
     "exp1.li4":
-      "Translate stakeholder & operational requirements into platform capabilities — own the technical conversation with non-technical teams.",
+      "Partnered with stakeholders and non-technical teams to translate business requirements into scalable technical solutions.",
 
     "exp2.tag": "2025 — Present",
     "exp2.subtag": "Full Stack Developer",
     "exp2.role": "Full Stack Developer",
     "exp2.company": "Comma",
-    "exp2.companySub": "— ZOKA Marketplace",
-    "exp2.body":
-      "Building ZOKA — a multi-tenant marketplace across five actor types. Own backend services and dashboard infrastructure.",
+   "exp2.body":
+      "Developed e-commerce and marketplace solutions, collaborating with product and business teams to deliver scalable features that improve operational efficiency and user experience.",
+    "exp2.selected": "Selected Work",
     "exp2.li1":
-      "Multi-store order orchestration — split → warehouse routing → reassembly → dispatch, with notification fanout per state.",
+      "ZOKA — Multi-tenant marketplace platform supporting merchants, customers, warehouses, delivery operations, and administrators.",
     "exp2.li2":
-      "Dual-currency wallet (USD + SYP) with automatic store crediting on delivery.",
+      "Implemented order lifecycle orchestration, wallet systems, pricing automation, and marketplace management capabilities.",
     "exp2.li3":
-      "Infinite-depth category nesting; admin-configurable delivery pricing tiers.",
+      "Contributed to multiple e-commerce products, designing backend services and operational workflows aligned with business objectives.",
     "exp2.li4":
-      "Work directly with product & business requirements to design multi-actor marketplace workflows.",
+      "Partnered with stakeholders to transform product requirements into scalable technical solutions.",
 
-    "exp3.tag": "Apr — Sep 2025",
+    "exp3.tag": "May — Oct 2025",
     "exp3.subtag": "Co-Founder · Lead Developer",
     "exp3.role": "Co-Founder &amp; Lead Developer",
-    "exp3.company": "Wasla Startup",
-    "exp3.companySub": "",
-    "exp3.body":
+    "exp3.company": "Wasla",
+   "exp3.body":
       "Co-founded and led the development of Wasla — an early-stage startup connecting entrepreneurs with investors. Responsible for product validation, MVP architecture, technical execution, and customer feedback loops.",
     "exp3.li1":
       "Shaped the product: entrepreneurs pitch projects professionally, investors browse and connect, and a network of expert advisors supports both sides.",
@@ -151,51 +132,26 @@ const I18N = {
     "chip.mvp": "MVP Delivery",
     "chip.feedback": "Customer Feedback",
 
-    "exp4.tag": "2024",
-    "exp4.subtag": "Freelance · AI Search",
-    "exp4.role": "AI Search Integration — Freelance",
-    "exp4.company": "E-commerce Client",
-    "exp4.companySub": "— Bilingual Semantic Search",
-    "exp4.body":
-      "Bilingual semantic search for an e-commerce catalog. Replaced keyword matching that was missing valid AR/EN product matches.",
-    "exp4.li1":
-      "Vector search pipeline with multilingual-e5-large-instruct + Qdrant — AR/EN in the same vector space.",
-    "exp4.li2":
-      "Chose e5-large-instruct after measuring lighter models' Arabic dialect/morphology loss.",
-    "exp4.li3":
-      "Replaced keyword blind spots — misspellings, synonyms, cross-language all return relevant results.",
-
     "proj.num": "04 / Projects",
     "proj.title": "Selected <em>work</em>.",
 
-    "proj0.tag": "— Featured · Co-Founder &amp; Lead Developer",
-    "proj0.year": "2025",
-    "proj0.title": "Wasla — <em>Startup</em>, founded &amp; led",
-    "proj0.desc":
-      "Wasla is a platform connecting ambitious entrepreneurs with interested investors — founders pitch their projects professionally, investors browse ideas that match their interests and reach out directly, and a network of expert advisors helps both sides make informed decisions. Co-founded it and led development end to end: product scoping, MVP delivery, and customer feedback loops. When the data made the call, wound it down honestly — and kept the lesson. Few portfolios show the full founder's loop: build, measure, decide.",
-    "proj0.status": "Wound down · Validated honestly",
     "chip.leadership": "Leadership",
 
-    "proj1.tag": "— AI integration · Freelance",
     "proj1.year": "2024",
     "proj1.title": "Bilingual <em>Semantic Search</em> Engine",
     "proj1.desc":
       'Keyword search on a bilingual e-commerce catalog was silently missing valid matches — "حذاء رياضي" returned zero results for "sneakers". Replaced it with a vector pipeline on multilingual-e5-large-instruct + Qdrant, embedding Arabic and English into a single shared space. Evaluated lighter models first; e5-large-instruct won on Arabic morphology and dialect handling. Cross-language retrieval, synonym tolerance, and misspelling resilience — all resolved at the embedding layer.',
 
-    "proj2.tag": "— Automation",
     "proj2.year": "2024 — Present",
     "proj2.title": "Production <em>Workflow</em> Automation",
     "proj2.desc":
       "Brittle cron + shell-script pipelines were failing silently — no observability, no retries. Redesigned as event-driven n8n workflows: order-lifecycle notifications fan out to customer/store/warehouse on every state transition, and SLA-breach detection auto-escalates to department heads. Dead-letter queues, automatic retries, and a no-code UI included — ops manages and debugs workflows without server access or engineering involvement.",
 
-    "proj3.tag": "— Automata4",
-    "proj3.label": "Production · Government",
     "proj3.title": "Wajab — <em>Complaint</em> Platform",
     "proj3.desc":
       "Multi-tenant platform routing citizen complaints across government administrative levels — designed for concurrent load from day one. Tuned hot paths with Redis caching and Octane's persistent-worker model; validated at 500 concurrent users under JMeter before launch. Result: 30% reduction in API response time, sub-second p95 on core endpoints. Telegram bot added as a parallel entry point — citizens file without leaving the channel they already use.",
     "proj3.visit": "Visit Wajab",
 
-    "proj4.tag": "— Comma",
     "proj4.label": "Production · Marketplace",
     "proj4.title": "ZOKA — <em>Multi-tenant</em> Marketplace",
     "proj4.desc":
@@ -216,7 +172,7 @@ const I18N = {
     "contact.num": "05 / Contact",
     "contact.title": "Let's <em>create</em> something.",
     "contact.lead":
-      "Open to <em>senior engineering and technical leadership</em> roles — full-time, contract, and collaborations where engineering meets product.",
+      "Open to <em>software engineer and technical leadership</em> roles — full-time, contract, and collaborations.",
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.location": "Based in",
@@ -238,11 +194,12 @@ const I18N = {
     "nav.cta": "نبني معاً",
     "lang.switch": "English",
 
-    "hero.name": "مريم<br/>عشا",
+    "hero.name": "مريم<em> عشا</em>",
+    "hero.subrole": "مهندسة برمجيات",
     "hero.role":
       'مهندسة برمجيات شغوفة ببناء <span class="stack">منتجات قابلة للتوسّع</span>، وقيادة المبادرات التقنية، وتقديم حلول تُحدث أثراً ملموساً في الأعمال.',
     "hero.sub":
-      "أبني الأنظمة، وأحسّن العمليات، وأساعد الفرق على تحويل المتطلبات المعقّدة إلى منتجات قابلة للتوسّع.",
+      "مهتمّة بتقاطع التقنية واستراتيجية المنتج ونمو الأعمال.",
     "hero.hireMe": "لنعمل معاً",
     "hero.viewPortfolio": "عرض الأعمال",
     "hero.downloadCv": "تحميل السيرة",
@@ -263,11 +220,11 @@ const I18N = {
     "about.lead":
       "أبني أنظمة إنتاجية حيث <em>الطرق السهلة لا تتوسّع</em> — وأحافظ على خط الأداء والأمان وقابلية المراقبة.",
     "about.p1":
-      "مطوّرة ميّالة إلى الـ Backend، مقرّها حلب. أكثر من ثلاث سنوات في بناء APIs بـ Laravel وواجهات Vue.js — أنظمة متعددة المستأجرين، خطوط معالجة آنية، تصميم المخططات، صلاحيات الأدوار، والتخزين المؤقت.",
+      "مهندسة برمجيات مقرّها حلب، بخبرة تتجاوز ثلاث سنوات في بناء تطبيقات ويب قابلة للتوسّع، ومنصّات متعددة المستأجرين، وأنظمة آنية. يمتدّ عملي عبر معمارية الـ Backend، وتصميم الأنظمة، وتطوير المنتجات Full Stack باستخدام Laravel و Vue.js.",
     "about.p2":
-      "خلفية في علم البيانات — رؤية الحاسوب، معالجة اللغة الطبيعية، نماذج التضمين — قبل الانتقال إلى Full Stack. قواعد البيانات المتجهية وميزات الذكاء الاصطناعي أرض مألوفة؛ ألجأ إليها فقط حين تستحق مكانها.",
+      "تشمل خلفيتي في علم البيانات معالجة اللغة الطبيعية، ورؤية الحاسوب، والبحث الدلالي، والأنظمة القائمة على التضمين. واليوم أتعامل مع الذكاء الاصطناعي كأداة عملية — أوظّفها حين تحلّ مشكلات حقيقية، وتُحسّن تجربة المستخدم، وتخلق قيمة ملموسة.",
     "about.p3":
-      "وراء الهندسة: شاركت في تأسيس شركة ناشئة وأتابع حالياً ماجستير إدارة الأعمال. يهمّني كيف تتشكّل المنتجات، وكيف تصطفّ الفرق، وكيف تترجم القرارات التقنية إلى نتائج أعمال.",
+      "وراء الهندسة، شاركت في تأسيس شركة ناشئة وأتابع حالياً ماجستير إدارة الأعمال. يهمّني تحديداً تقاطع التقنية واستراتيجية المنتج والقيادة ونمو الأعمال — مستكشِفةً كيف تجتمع الفرق القوية والمنتجات المدروسة والقرارات التقنية السليمة لتخلق أثراً دائماً.",
     "about.stat1.n": "<em>٣+</em>",
     "about.stat1.l": "سنوات في بناء<br/>تطبيقات متكاملة",
     "about.stat2.n": "<em>٣٠٪</em>",
@@ -290,17 +247,9 @@ const I18N = {
     "skills.num": "٠٢ / أدواتي",
     "skills.title": "الـ <em>أدوات</em> التي أمدّ يدي إليها.",
     "skills.backend.title": "الـ Backend <em>· الأساس</em>",
-    "skills.backend.caption":
-      "واجهات Laravel، تحسين الاستعلامات، التخزين المؤقت، الأنظمة متعددة المستأجرين.",
     "skills.frontend.title": "الـ Frontend <em>· الأساس</em>",
-    "skills.frontend.caption":
-      "تطبيقات Vue أحادية الصفحة، واجهات متجاوبة، إدارة الحالة، أدوات حديثة.",
     "skills.ai.title": "الذكاء الاصطناعي والبحث <em>· مدمج</em>",
-    "skills.ai.caption":
-      "نماذج التضمين، البحث المتجهي، ميزات مدمجة بالذكاء الاصطناعي.",
     "skills.tools.title": "الأدوات <em>وسير العمل</em>",
-    "skills.tools.caption":
-      "الأتمتة، إدارة الإصدارات، اختبار الحمل، قابلية المراقبة.",
     "skills.lvl.expert": "محترفة",
     "skills.lvl.advanced": "متقدمة",
     "skills.lvl.proficient": "جيدة",
@@ -312,58 +261,46 @@ const I18N = {
     "skills.chip.semantic": "بحث دلالي",
     "skills.chip.n8n": "أتمتة n8n",
     "skills.chip.agile": "Agile / Scrum",
-    "skills.lead.title": "القيادة <em>والتسليم</em>",
-    "skills.lead.caption":
-      "الجزء من العمل الذي ليس كوداً — مُمارَس في الإنتاج، لا في النظريات.",
-    "skills.chip.techLead": "قيادة تقنية",
-    "skills.chip.reqAnalysis": "تحليل المتطلبات",
-    "skills.chip.stakeholder": "التواصل مع أصحاب المصلحة",
-    "skills.chip.productVal": "التحقق من المنتج",
-    "skills.chip.archDecisions": "قرارات المعمارية",
-    "skills.chip.mentoring": "مراجعة الكود والتوجيه",
-    "skills.chip.agileDelivery": "تسليم Agile",
 
     "exp.num": "٠٣ / مساري",
     "exp.title": "أين <em>أطلقتُ</em>.",
 
     "exp1.tag": "٢٠٢٣ — حالياً",
     "exp1.role": "مطوّرة Full Stack",
-    "exp1.location": "حلب",
     "exp1.company": "Automata4 Group",
-    "exp1.companySub": "— Wajab و Katateeb",
     "exp1.body":
-      "المطوّرة الرئيسية عبر منصتين — Wajab (شكاوى حكومية) و Katateeb (نظام إدارة مدرسي). أملك الـ Backend والأداء والبنية الآنية.",
+      "أعمل عبر منتجات ومجالات متعدّدة، وأبني أنظمة قابلة للتوسّع تدعم الكفاءة التشغيلية وتفاعل المستخدمين وأهداف الأعمال.",
+    "exp1.selected": "أعمال مختارة",
     "exp1.li1":
-      "Wajab — Backend معياري؛ Redis + Laravel Octane ← تسريع APIs بنسبة ٣٠٪، وp95 دون الثانية.",
+      "Wajab — حسّنت أداء الـ Backend باستخدام Redis و Laravel Octane، محقّقةً تسريعاً في الـ APIs بنسبة ٣٠٪.",
     "exp1.li2":
-      "تم التحقق بـ JMeter عند ٥٠٠ مستخدم متزامن قبل الإطلاق.",
+      "Katateeb — بنيت بنية تواصل وإشعارات آنية للطلاب والمعلمين والإداريين.",
     "exp1.li3":
-      "Katateeb — خدمات API للطلاب والمعلمين والمدراء؛ دردشة وإشعارات آنية عبر Laravel Reverb.",
+      "ساهمت في منصّات داخلية وأخرى موجّهة للعملاء عبر مجالات حكومية وتعليمية وتشغيلية.",
     "exp1.li4":
-      "أترجم متطلبات أصحاب المصلحة والتشغيل إلى قدرات في المنصة — وأملك الحوار التقني مع الفرق غير التقنية.",
+      "تعاونت مع أصحاب المصلحة والفرق غير التقنية لترجمة متطلبات الأعمال إلى حلول تقنية قابلة للتوسّع.",
 
     "exp2.tag": "٢٠٢٥ — حالياً",
     "exp2.subtag": "مطوّرة Full Stack",
     "exp2.role": "مطوّرة Full Stack",
     "exp2.company": "Comma",
-    "exp2.companySub": "— سوق ZOKA",
-    "exp2.body":
-      "أبني ZOKA — سوقاً متعدد المستأجرين عبر خمسة أنواع من الفاعلين. أملك خدمات الـ Backend وبنية لوحات التحكم.",
+   "exp2.body":
+      "طوّرت حلول تجارة إلكترونية وأسواق رقمية، بالتعاون مع فرق المنتج والأعمال لتقديم ميزات قابلة للتوسّع تُحسّن الكفاءة التشغيلية وتجربة المستخدم.",
+    "exp2.selected": "أعمال مختارة",
     "exp2.li1":
-      "تنسيق طلبات متعددة المتاجر — تقسيم ← توجيه للمستودعات ← إعادة تجميع ← إرسال، مع بثّ إشعارات لكل حالة.",
+      "ZOKA — منصّة سوق متعددة المستأجرين تدعم التجّار والعملاء والمستودعات وعمليات التوصيل والإداريين.",
     "exp2.li2":
-      "محفظة بعملتين (دولار + ليرة سورية) مع إيداع تلقائي للمتجر عند التسليم.",
+      "نفّذت تنسيق دورة حياة الطلب، وأنظمة المحافظ، وأتمتة التسعير، وقدرات إدارة السوق.",
     "exp2.li3":
-      "تداخل فئات بعمق لا نهائي؛ شرائح تسعير توصيل قابلة للضبط من لوحة الإدارة.",
+      "ساهمت في عدّة منتجات تجارة إلكترونية، مصمّمةً خدمات Backend وتدفقات تشغيلية متوائمة مع أهداف الأعمال.",
     "exp2.li4":
-      "أعمل مباشرة مع متطلبات المنتج والأعمال لتصميم تدفقات سوق متعددة الفاعلين.",
+      "تعاونت مع أصحاب المصلحة لتحويل متطلبات المنتج إلى حلول تقنية قابلة للتوسّع.",
 
     "exp3.tag": "نيسان — أيلول ٢٠٢٥",
     "exp3.subtag": "شريكة مؤسِّسة · مطوّرة رئيسية",
     "exp3.role": "شريكة مؤسِّسة · مطوّرة رئيسية",
     "exp3.company": "Wasla",
-    "exp3.companySub": "",
-    "exp3.body":
+   "exp3.body":
       "شاركت في تأسيس وصلة وقُدت تطويرها — شركة ناشئة في مراحلها المبكرة تربط روّاد الأعمال بالمستثمرين. مسؤولة عن التحقق من المنتج، ومعمارية الـ MVP، والتنفيذ التقني، وحلقات ملاحظات العملاء.",
     "exp3.li1":
       "صُغت المنتج: روّاد أعمال يعرضون مشاريعهم باحترافية، ومستثمرون يستعرضون الأفكار ويتواصلون مباشرة، وشبكة مستشارين خبراء تدعم الطرفين.",
@@ -378,51 +315,27 @@ const I18N = {
     "chip.mvp": "تسليم MVP",
     "chip.feedback": "ملاحظات العملاء",
 
-    "exp4.tag": "٢٠٢٤",
-    "exp4.subtag": "عمل حر · بحث ذكي",
-    "exp4.role": "تكامل بحث ذكي — عمل حر",
-    "exp4.company": "عميل تجارة إلكترونية",
-    "exp4.companySub": "— بحث دلالي ثنائي اللغة",
-    "exp4.body":
-      "بحث دلالي ثنائي اللغة لكتالوج تجارة إلكترونية. استبدلت المطابقة بالكلمات المفتاحية التي كانت تُفوّت نتائج عربية/إنجليزية صحيحة.",
-    "exp4.li1":
-      "خط بحث متجهي بـ multilingual-e5-large-instruct + Qdrant — العربية والإنجليزية في الفضاء المتجهي نفسه.",
-    "exp4.li2":
-      "اخترت e5-large-instruct بعد قياس ضعف النماذج الأخف في لهجات العربية وصرفها.",
-    "exp4.li3":
-      "عالجت النقاط العمياء للكلمات المفتاحية — الأخطاء الإملائية والمرادفات والبحث عبر اللغات تُعيد جميعها نتائج ذات صلة.",
-
     "proj.num": "٠٤ / أعمالي",
     "proj.title": "أعمال <em>مختارة</em>.",
 
-    "proj0.tag": "— مميّز · شريكة مؤسِّسة ومطوّرة رئيسية",
-    "proj0.year": "٢٠٢٥",
-    "proj0.title": "Wasla — شركة ناشئة، <em>أسّستها وقُدتها</em>",
-    "proj0.desc":
-      "وصلة منصة تربط روّاد الأعمال الطموحين بالمستثمرين المهتمين — يعرض المؤسسون مشاريعهم بطريقة احترافية، ويستعرض المستثمرون الأفكار التي تهمّهم ويباشرون التواصل مع أصحابها، وشبكة من المستشارين الخبراء تساعد الطرفين على اتخاذ قرارات مدروسة. شاركت في تأسيسها وقُدت تطويرها من البداية إلى النهاية: نطاق المنتج، وتسليم الـ MVP، وحلقات ملاحظات العملاء. وحين حسمت البيانات الأمر، أوقفتها بصدق — واحتفظت بالدرس. قلّة من الملفات المهنية تُظهر حلقة المؤسِّس كاملة: بناء، قياس، قرار.",
-    "proj0.status": "أُوقفت · تحقّق صادق",
     "chip.leadership": "قيادة",
 
-    "proj1.tag": "— تكامل ذكاء اصطناعي · عمل حر",
     "proj1.year": "٢٠٢٤",
     "proj1.title": "محرك <em>بحث دلالي</em> ثنائي اللغة",
     "proj1.desc":
       "كان البحث بالكلمات المفتاحية في كتالوج تجارة إلكترونية ثنائي اللغة يُفوّت نتائج صحيحة بصمت — «حذاء رياضي» يُعيد صفر نتيجة عن «sneakers». استبدلته بخط متجهي على multilingual-e5-large-instruct + Qdrant، يُضمّن العربية والإنجليزية في فضاء مشترك واحد. قيّمت النماذج الأخف أولاً؛ تفوّق e5-large-instruct في صرف العربية ومعالجة اللهجات. الاسترجاع عبر اللغات، وتحمّل المرادفات، ومقاومة الأخطاء الإملائية — كلها محلولة في طبقة التضمين.",
 
-    "proj2.tag": "— أتمتة",
     "proj2.year": "٢٠٢٤ — حالياً",
     "proj2.title": "أتمتة <em>سير عمل</em> إنتاجية",
     "proj2.desc":
       "كانت خطوط cron وسكربتات الـ shell الهشّة تفشل بصمت — بلا مراقبة ولا إعادة محاولة. أعدت تصميمها كتدفقات n8n مدفوعة بالأحداث: إشعارات دورة حياة الطلب تُبَثّ إلى العميل والمتجر والمستودع عند كل تغيّر حالة، واكتشاف خرق الـ SLA يُصعّد تلقائياً إلى رؤساء الأقسام. تتضمن طوابير الرسائل الميتة، وإعادة المحاولة التلقائية، وواجهة بلا كود — يدير الفريق التشغيلي التدفقات ويصحّحها دون وصول للخادم أو تدخّل هندسي.",
 
-    "proj3.tag": "— Automata4",
     "proj3.label": "إنتاج · حكومي",
     "proj3.title": "Wajab — منصة <em>الشكاوى</em>",
     "proj3.desc":
       "منصة متعددة المستأجرين توجّه شكاوى المواطنين عبر المستويات الإدارية الحكومية — مصمّمة للحمل المتزامن منذ اليوم الأول. ضبطت المسارات الساخنة بتخزين Redis المؤقت ونموذج العامل الدائم في Octane؛ تم التحقق عند ٥٠٠ مستخدم متزامن تحت JMeter قبل الإطلاق. النتيجة: خفض ٣٠٪ في زمن استجابة الـ API، وp95 دون الثانية على نقاط النهاية الأساسية. أُضيف بوت Telegram كنقطة دخول موازية — يقدّم المواطنون شكاواهم دون مغادرة القناة التي يستخدمونها أصلاً.",
     "proj3.visit": "زيارة وجب",
 
-    "proj4.tag": "— Comma",
     "proj4.label": "إنتاج · سوق",
     "proj4.title": "ZOKA — سوق <em>متعدد المستأجرين</em>",
     "proj4.desc":
